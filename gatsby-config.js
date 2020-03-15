@@ -5,7 +5,7 @@ const { spaceId, accessToken } = process.env;
 module.exports = {
   siteMetadata: {
     title: `Support Local Akron - Show Your Love ❤️`,
-    description: `A place to find out how to help our local contentfulBusinesses`,
+    description: `A place to find out how to help our local businesses.`,
     author: `Byron & Kirsten Delpinal`,
     twitterHandle: '@ByronDelpinal / @CreativeEyeDesigns',
     url:`https://supportlocalakron.com/`

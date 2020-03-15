@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
-@import url("https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&display=swap");
 
 body {
   background-color: #fafdff !important;
 }
+
 a {
   color: #333;
   text-decoration: none;
@@ -16,9 +16,11 @@ a:hover {
   color: #777;
   text-decoration: none;
 }
+
 li {
   list-style: none;
 }
+
 img {
   max-width: 100%;
 }
@@ -132,6 +134,30 @@ section {
   position: relative;
 }
 
+.indexpage .see-all-wrapper {
+  width: 100%;
+}
+
+.indexpage .see-all {
+  display: block;
+  line-height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  width: 20vw;
+}
+
+.indexpage .see-all:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .indexpage .see-all {
+    font-size: 1.2rem;
+    width: 40vw;
+  }
+}
+
 .animated {
   -webkit-animation-duration: 0.6s;
   animation-duration: 0.6s;
@@ -208,14 +234,16 @@ section {
 }
 
 .name {
+  font-family: "Josefin Sans", sans-serif;
   font-size: 36px;
   font-weight: 900;
 }
 
 .greetings {
+  font-family: "Josefin Sans", sans-serif;
   font-size: 40px;
+  font-weight: lighter;
   margin: 10px 0px;
-  font-family: "Indie Flower", cursive;
 }
 
 .overlay {
@@ -336,10 +364,12 @@ ul.col-lg-12.portfolio-img-cnt li {
 }
 
 h2.section-title {
-  font-size: 42px;
+  font-size: 36px;
   margin-top: 0;
   margin-bottom: 25px;
-  font-family: "Indie Flower", cursive;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 h2.section-title:after {
@@ -403,11 +433,16 @@ a.entry-read-more {
   text-align: right;
   display: inline-block;
   font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
   width: 100%;
   color: #35833f;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 18px;
+}
+
+a.entry-read-more:hover {
+  color: #51a559;
 }
 
 .hide {
@@ -473,6 +508,10 @@ a.entry-read-more {
   font-style: italic;
 }
 
+.photo-credit a {
+  color: #35833f;
+}
+
 .portfolio-listing .tab-list {
   padding: 0;
   text-align: center;
@@ -518,7 +557,9 @@ a.entry-read-more {
 }
 
 .inner-blog-post .business-content h3 {
-  font-family: "Indie Flower", cursive;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .sidebar-blk {
@@ -675,8 +716,9 @@ a.entry-read-more {
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background: #33a1d8;
-  font-family: "Indie Flower", cursive;
+  background: #35833f;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.5;
@@ -701,22 +743,30 @@ a.entry-read-more {
   font-family: "Josefin Sans", sans-serif;
   font-weight: normal;
   background: transparent;
-  color: #33a1d8;
-  border: 2px solid #33a1d8;
+  color: #dbdbdb;
+  border: 2px solid #35833f;
 }
+
 .contact100-form-btn:hover {
   background: transparent;
-  color: #33a1d8;
-  border: 2px solid #33a1d8;
+  color: #35833f;
+  border: 2px solid #35833f;
 }
+
+.contact100-clear-btn {
+  color: #35833f;
+}
+
 .contact100-clear-btn:hover {
-  background: #33a1d8;
+  background: #35833f;
   color: #fff;
 }
+
 .input100:focus + .focus-input100 {
   -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
   animation: anim-shadow 0.5s ease-in-out forwards;
 }
+
 .focus-input100 {
   display: block;
   position: absolute;
@@ -746,7 +796,8 @@ a.entry-read-more {
 h4.success-msg {
   width: 100%;
   text-align: center;
-  font-family: "Indie Flower", cursive;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
   color: #07acff;
   font-weight: 700;
   font-size: 36px;

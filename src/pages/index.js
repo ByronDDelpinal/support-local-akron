@@ -44,7 +44,7 @@ class IndexPage extends React.Component {
             <div className="overlay">
               <div className="center">
                 <h1 className="name">
-                  <b>Support Local Akron</b>
+                  <b>SUPPORT LOCAL AKRON</b>
                 </h1>
                 <h5 className="greetings">
                   Show your love to our amazing local businesses
@@ -69,10 +69,12 @@ class IndexPage extends React.Component {
                           </div>
                         )
                       })}
-                      <Link to="/business" className="entry-read-more">
-                        <span />
-                        See All
-                      </Link>
+                      <div className="see-all-wrapper">
+                        <Link to="/business" className="see-all contact100-clear-btn">
+                          <span />
+                          See All
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
