@@ -24,9 +24,9 @@ const Template = ({ children }) => (
           siteMetadata {
             title
             description
-            
+
           }
-        }        
+        }
       }
     `}
     render={data => (
@@ -47,7 +47,7 @@ const Template = ({ children }) => (
         <div className="main-content">
         {children}
         </div>
-    
+
         <Footer />
       </>
     )}
