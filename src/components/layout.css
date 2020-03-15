@@ -762,7 +762,7 @@ a.entry-read-more:hover {
   background: #35833f;
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 50px;
   text-align: center;
@@ -779,8 +779,9 @@ a.entry-read-more:hover {
 }
 
 @media only screen and (max-width: 800px) {
-  .contact100-form-btn {
-    font-size: 18px;
+  .contact100-form-btn,
+  .contact100-clear-btn {
+    font-size: 1rem;
   }
 }
 
