@@ -456,6 +456,12 @@ article.blog-listing a.entry-read-more {
   border-color: transparent;
 }
 
+.photo-credit {
+  color: gray;
+  font-size: 1rem;
+  font-style: italic;
+}
+
 .portfolio-listing .tab-list {
   padding: 0;
   text-align: center;
@@ -542,11 +548,13 @@ article.blog-listing a.entry-read-more {
   background-position: center center;
   background-size: cover;
 }
+
 .container-contact100 {
   width: 100%;
   min-height: 100vh;
   background: rgba(240, 250, 255, 0.8);
 }
+
 .wrap-contact100 {
   background: #fafdfe;
   background: #fff;
@@ -562,6 +570,7 @@ article.blog-listing a.entry-read-more {
   padding: 50px;
   box-shadow: 3px 3px 5px #7f7f7f85;
 }
+
 .contact100-pic {
   width: 10rem;
   display: inline-block;
@@ -571,6 +580,7 @@ article.blog-listing a.entry-read-more {
   transition: 0.4s ease-out;
   vertical-align: top;
 }
+
 .contact-form {
   width: calc(100% - 10rem);
   display: inline-block;
