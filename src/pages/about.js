@@ -39,9 +39,9 @@ export class About extends Component {
                     resources:
                   </p>
                   <ul>
-                    <li><a href="https://ohiochannel.org/" rel="noopener" target="_blank">The Ohio Channel</a></li>
-                    <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" rel="noopener" target="_blank">World Health Organization (WHO)</a></li>
-                    <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" rel="noopener" target="_blank">Centers for Disease Control & Prevention (CDC)</a></li>
+                    <li><a href="https://ohiochannel.org/" rel="noopener noreferrer" target="_blank">The Ohio Channel</a></li>
+                    <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" rel="noopener noreferrer" target="_blank">World Health Organization (WHO)</a></li>
+                    <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" rel="noopener noreferrer" target="_blank">Centers for Disease Control & Prevention (CDC)</a></li>
                   </ul>
                 </div>
               </div>

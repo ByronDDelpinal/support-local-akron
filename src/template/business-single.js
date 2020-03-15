@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Layout from "../components/layout"
 // import Sidebar from "../components/sidebar"
 import Helmet from "react-helmet"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
@@ -58,7 +58,10 @@ class BusinessTemplate extends Component {
                 </div>
                 <div className="post-content">
                   <h2 className="section-headline"> {business.name} </h2>
-                  <p className="business-type">Business Type: {business.type}</p>
+                  <p className="business-type">Type: {business.type}</p>
+                  <p className="business-type">
+                    <a class="business-website" href={business.website} target="_blank" rel="noopener noreferrer">Check Out Their Website Here!</a>
+                    </p>
                   <div className="business-content">
                     <h3>Our Story</h3>
                     {documentToReactComponents(businessStory)}
@@ -134,6 +137,7 @@ export const pageQuery = graphql`
       }
       type
       urlName
+      website
     }
 
     allContentfulBusinesses(limit: 5) {
@@ -156,6 +160,7 @@ export const pageQuery = graphql`
         name
         type
         urlName
+        website
       }
     }
   }

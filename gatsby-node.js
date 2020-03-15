@@ -26,6 +26,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
         type
         urlName
+        website
       }
     }
   }

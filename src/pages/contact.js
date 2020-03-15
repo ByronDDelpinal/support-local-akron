@@ -135,6 +135,7 @@ export class Contact extends Component {
                         </li>
                       </ul>
                     </form>
+                    <p className="photo-credit">Background Photo Credit: <a href="https://www.shanewynn.com/">Shane Wynn</a></p>
                   </div>
                 </div>
               </div>

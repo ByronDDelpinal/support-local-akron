@@ -57,6 +57,7 @@ img {
 }
 
 .brand-logo {
+  margin-top: 10px;
   padding-top: 3px;
   display: inline-block;
 }
@@ -177,8 +178,13 @@ section {
   animation-name: fadeIn;
 }
 
+.footer-wrapper .copyright {
+  margin-top: 10px;
+}
+
 .footer-wrapper a {
   color: #35833f;
+  margin-top: 10px;
 }
 
 .footer-wrapper img {
@@ -865,4 +871,8 @@ h4.success-msg {
 .post-social .button.whatsapp {
   color: #128c7e;
   border-color: #128c7e;
+}
+
+.business-website {
+  color: #35833f;
 }
