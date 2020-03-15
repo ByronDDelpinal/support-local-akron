@@ -103,6 +103,7 @@ class IndexPage extends React.Component {
                     </div>
                   </div>
                 </div>
+                <p className="photo-credit">Header Photo Credit: <a href="http://northsidemarketplace.com/">Northside Marketplace</a></p>
 
                 {/* <div className="pad-70">
                   <h2 className="portfolio-title text-center  section-title">

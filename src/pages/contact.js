@@ -23,6 +23,7 @@ export class Contact extends Component {
                     <form
                       name="contact"
                       method="post"
+                      content-type="multipart/form-data"
                       data-netlify="true"
                       className="contact-form"
                       data-netlify-honeypot="bot-field"
