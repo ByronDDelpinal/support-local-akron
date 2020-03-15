@@ -601,6 +601,7 @@ a.entry-read-more {
   .contact-form {
     display: block;
     margin: 0 auto;
+    padding: 0;
     width: 100%;
   }
 }
@@ -683,6 +684,13 @@ a.entry-read-more {
   outline: none !important;
   border: 2px solid transparent;
 }
+
+@media only screen and (max-width: 800px) {
+  .contact100-form-btn {
+    font-size: 18px;
+  }
+}
+
 .contact100-clear-btn {
   font-family: "Josefin Sans", sans-serif;
   font-weight: normal;
