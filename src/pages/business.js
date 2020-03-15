@@ -64,6 +64,9 @@ export const pageQuery = graphql`
             sizes
           }
         }
+        supportSummary {
+          json
+        }
         type
         urlName
       }
