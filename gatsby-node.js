@@ -4,25 +4,30 @@ const { createFilePath } = require('gatsby-source-filesystem');
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
-    {
-        allContentfulPortfolio {
-        edges {
-          node {
-            slug
-            blogTitle
-          }
+  {
+    allContentfulBusinesses {
+      nodes {
+        image {
+          id
         }
+        name
+        type
+        urlName
       }
     }
+  }
   `).then(result => {
-    result.data.allContentfulPortfolio.edges.forEach(({ node }) => {
+    result.data.allContentfulBusinesses.nodes.forEach(business => {
       createPage({
-        path: node.slug,
-        component: path.resolve(`./src/template/blog-single.js`),
+        path: business.urlName,
+        component: path.resolve(`./src/template/business-single.js`),
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.
-          slug: node.slug,
+          name: business.name,
+          image: business.image,
+          slug: business.urlName,
+          type: business.type
         },
       })
     })

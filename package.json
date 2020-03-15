@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "support-local-akron",
+  "description": "A way to support local Akron contentfulBusinesses during the coronovirus quarantine",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Byron Delpinal <byronddelpinal@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-brands-svg-icons": "^5.8.1",
@@ -48,7 +47,8 @@
     "prettier": "^1.16.4"
   },
   "keywords": [
-    "gatsby"
+    "local business",
+    "Akron, OH"
   ],
   "license": "MIT",
   "scripts": {

@@ -24,10 +24,7 @@ export class Header extends Component {
                     <Link to="/about/">About</Link>
                   </li>
                   <li>
-                    <Link to="/randomclicks/">Portfolio</Link>
-                  </li>
-                  <li>
-                    <Link to="/blog/">Blog </Link>
+                    <Link to="/business/">Local Businesses</Link>
                   </li>
                   <li>
                     <Link to="/contact/">Contact</Link>
@@ -35,7 +32,7 @@ export class Header extends Component {
                 </ul>
               </nav>
             </div>
-   
+
           </div>
         </div>
       </section>

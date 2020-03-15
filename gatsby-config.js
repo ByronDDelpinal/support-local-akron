@@ -4,11 +4,11 @@ dotenv.config();
 const { spaceId, accessToken } = process.env;
 module.exports = {
   siteMetadata: {
-    title: `Photos Portfolio - A Gatsby Contentful Site`,
-    description: `Learning Website using Gatsby for photos portfolio`,
-    author: `@abc`,
-    twitterHandle: '@abc',
-    url:`https://myclicks.netlify.com/`
+    title: `Support Local Akron - Show Your Love ❤️`,
+    description: `A place to find out how to help our local contentfulBusinesses`,
+    author: `Byron & Kirsten Delpinal`,
+    twitterHandle: '@ByronDelpinal / @CreativeEyeDesigns',
+    url:`https://supportlocalakron.com/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -34,7 +34,7 @@ module.exports = {
         plugins: [],
       },
     },
-    `gatsby-transformer-sharp`,   
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -55,7 +55,7 @@ module.exports = {
           spaceId,
           accessToken
         }
-     
+
     },
 
     {
@@ -72,6 +72,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
   ],
-  
+
 
 }
