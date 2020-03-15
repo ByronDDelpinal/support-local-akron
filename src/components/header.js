@@ -6,14 +6,6 @@ import logoImg from "../images/support-akron-logo.png"
 export class Header extends Component {
   render() {
     return (
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160723331-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-160723331-1');
-      </script>
       <section className="header-wrapper">
         <div className="container">
           <div className="row">
