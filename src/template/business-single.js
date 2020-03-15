@@ -9,19 +9,26 @@ import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick"
 import { DiscussionEmbed } from "disqus-react"
 import Share from "../components/Share"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 class BusinessTemplate extends Component {
   render() {
-    console.log(this.props.data)
-    const business = this.props.data.business
-    const siteurl = this.props.data.site.siteMetadata.url
-    const twitterhandle = this.props.data.site.siteMetadata.twitterHandle
-    const Imageurl = this.props.data.contentfulPortfolio.image
-    const post = this.props.data.contentfulBusinesses.edges
-    const disqusShortname = "myclicks-1"
-    const disqusConfig = {
-      identifier: business.id,
-      title: business.name,
+    const business = this.props.data.contentfulBusinesses;
+    const siteurl = this.props.data.site.siteMetadata.url;
+    const twitterhandle = this.props.data.site.siteMetadata.twitterHandle;
+    const Imageurl = business.image;
+    const post = this.props.data.allContentfulBusinesses.nodes;
+
+    const businessStory = {
+      nodeType: "document",
+      data: {},
+      content: business.story ? business.story.json.content : []
+    }
+
+    const businessSupportFull = {
+      nodeType: "document",
+      data: {},
+      content: business.supportFull ? business.supportFull.json.content : []
     }
 
     const socialConfigss = {
@@ -40,54 +47,42 @@ class BusinessTemplate extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
     }
-    let SliderImage
 
-    if (!Imageurl) {
-      SliderImage = (
-        <Img fluid={business.image.fluid} backgroundColor={"#f4f8fb"} />
-      )
-    } else {
-      SliderImage = (
-        <Slider {...settings}>
-          {Imageurl.map(({ file }, index) => {
-            return (
-              <div>
-                <img src={file.url} alt="modhera-sun-temple" />
-              </div>
-            )
-          })}
-        </Slider>
-      )
-    }
     return (
       <Layout>
         <Helmet title={`${business.name}`} />
         <div className="inner-blog-post pad-40">
           <div className="container">
             <div className="row">
-              <div className="col-lg-7 col-md-7">
-                <div className="entry-media">{SliderImage}</div>
+              <div className="col-lg-12 col-md-12">
+                <div className="entry-media">
+                  <Img fluid={business.image.fluid} backgroundColor={"#f4f8fb"} />
+                </div>
                 <div className="post-content">
                   <h2 className="section-headline"> {business.name} </h2>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: "TESTING",
-                    }}
-                  />
+                  <div className="business-content">
+                    <h3>Our Story</h3>
+                    {documentToReactComponents(businessStory)}
+                  </div>
+                  <div className="business-content">
+                    <h3>How To Support Us</h3>
+                    {documentToReactComponents(businessSupportFull)}
+                  </div>
                 </div>
               </div>
-              <div className="col-md-4 offset-md-1 ">
+              {/* Sidebar Stuff Goes Here, need to change back to col-lg-7 col-md-7 */}
+              {/* <div className="col-md-4 offset-md-1 ">
                 <div className="sidebar-blk">
                   <ul className="">
                     <li>TESTING MORE</li>
                     <li>TESTING MORE</li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
             {/* <Share socialConfig={{config: { socialConfigss, }, }} /> */}
 
-            <Share
+            {/* <Share
               socialConfig={{
                 ...socialConfigss.site.siteMetadata.twitterhandletitle,
                 config: {
@@ -95,11 +90,7 @@ class BusinessTemplate extends Component {
                   title: `${socialConfigss.title}`,
                 },
               }}
-            />
-            <DiscussionEmbed
-              shortname={disqusShortname}
-              config={disqusConfig}
-            />
+            /> */}
           </div>
         </div>
       </Layout>
@@ -121,9 +112,27 @@ export const pageQuery = graphql`
     contentfulBusinesses(urlName: {eq: $urlName}) {
       id
       image {
-        id
+        file {
+          url
+        }
+        fluid(maxWidth: 1800) {
+          base64
+          tracedSVG
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+        }
       }
       name
+      story {
+        json
+      }
+      supportFull {
+        json
+      }
       type
       urlName
     }
@@ -131,7 +140,19 @@ export const pageQuery = graphql`
     allContentfulBusinesses(limit: 5) {
       nodes {
         image {
-          id
+          file {
+            url
+          }
+          fluid(maxWidth: 1800) {
+            base64
+            tracedSVG
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+          }
         }
         name
         type

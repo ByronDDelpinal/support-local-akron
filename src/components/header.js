@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Link from "gatsby-link"
-import logoImg from "../images/logo.png"
+import logoImg from "../images/support-akron-logo.png"
 
 
 export class Header extends Component {

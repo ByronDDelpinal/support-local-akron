@@ -7,10 +7,23 @@ exports.createPages = ({ graphql, actions }) => {
   {
     allContentfulBusinesses {
       nodes {
-        image {
-          id
-        }
+        id
         name
+        image {
+          file {
+            url
+          }
+          fluid(maxWidth: 1800) {
+            base64
+            tracedSVG
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+          }
+        }
         type
         urlName
       }

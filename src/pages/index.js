@@ -5,14 +5,14 @@ import Layout from "../components/layout"
 
 // import SEO from "../components/seo"
 import Img from "gatsby-image"
-// import BlogPreview from "../components/blog-preview"
+import BusinessPreview from "../components/business-preview"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHeart, faComment } from "@fortawesome/free-solid-svg-icons"
 
 class IndexPage extends React.Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
-    // const blog = this.props.data.contentfulBusinesses.edges
+    const businesses = this.props.data.allContentfulBusinesses.nodes
     // const instaimg = this.props.data.allInstaNode.edges
     const coverphoto = this.props.data.coverImg
     // const settings = {
@@ -27,7 +27,6 @@ class IndexPage extends React.Component {
         <Helmet title={siteTitle} />
         <div className="herosection">
           <div id="#top" className="cover animated">
-
             <Img
               title="Cover image"
               alt="Air Balloon in Nature"
@@ -43,9 +42,11 @@ class IndexPage extends React.Component {
             <div className="overlay">
               <div className="center">
                 <h1 className="name">
-                  <b>HI, I'M Ammature Photographer</b>
+                  <b>Support Local Akron</b>
                 </h1>
-                <h5 className="greetings">Life through a Lens.!!!</h5>
+                <h5 className="greetings">
+                  Show your love to our amazing local businesses
+                </h5>
               </div>
             </div>
           </div>
@@ -53,22 +54,22 @@ class IndexPage extends React.Component {
           <div className="indexpage">
             <div className="right-section blog-post pad-70">
               <div className="container">
-                {/* <div className="pad-70">
+                <div className="pad-70">
                   <h2 className="portfolio-title text-center  section-title">
-                    Recent Blogs
+                    Just A Few Of Many Awesome Local Businesses
                   </h2>
                   <div className="col-md-10 offset-md-1 ">
                     <div className="row">
-                      {blog.map(({ node }) => {
+                      {businesses.map(business => {
                         return (
-                          <div key={node.id} className="col-md-6">
-                            <BlogPreview blog={node} />
+                          <div key={business.id} className="col-md-6">
+                            <BusinessPreview business={business} />
                           </div>
                         )
                       })}
                     </div>
                   </div>
-                </div> */}
+                </div>
 
                 {/* <div className="pad-70">
                   <h2 className="portfolio-title text-center  section-title">
@@ -123,7 +124,7 @@ export const query = graphql`
         description
       }
     }
-    coverImg: file(relativePath: { eq: "Green-mountains.jpg" }) {
+    coverImg: file(relativePath: { eq: "northside-akron.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920, maxHeight: 1080) {
           ...GatsbyImageSharpFluid
@@ -132,15 +133,30 @@ export const query = graphql`
     }
     allContentfulBusinesses(limit: 4) {
       nodes {
+        id
         name
         image {
-          id
+          file {
+            url
+          }
+          fluid(maxWidth: 1800) {
+            base64
+            tracedSVG
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+          }
+        }
+        supportSummary {
+          json
         }
         type
         urlName
       }
     }
-
   }
 `
 /* NAHHHH */

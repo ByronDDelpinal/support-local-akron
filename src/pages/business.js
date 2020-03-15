@@ -7,7 +7,7 @@ import { graphql } from 'gatsby'
 export class BusinessIndex extends Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
-    const post = this.props.data.contentfulBusinesses.edges
+    const businesses = this.props.data.allContentfulBusinesses.nodes
 
     return (
       <div>
@@ -18,9 +18,9 @@ export class BusinessIndex extends Component {
             <h2 className="section-title">Local Businesses</h2>
           </div>
           <ul className="article-list row">
-              {post.map(business => {
+              {businesses.map(business => {
                 return (
-                  <li key={business.slug} className="col-lg-6">
+                  <li key={business.urlName} className="col-lg-6">
                     <BusinessPreview business={business} />
                   </li>
                 )
@@ -47,10 +47,23 @@ export const pageQuery = graphql`
     }
     allContentfulBusinesses {
       nodes {
-        image {
-          id
-        }
+        id
         name
+        image {
+          file {
+            url
+          }
+          fluid(maxWidth: 1800) {
+            base64
+            tracedSVG
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+          }
+        }
         type
         urlName
       }

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import logoImg from "../images/logo.png"
+import logoImg from "../images/support-akron-logo.png"
 import { Link } from "gatsby"
 
 export class Footer extends Component {
@@ -13,9 +13,9 @@ export class Footer extends Component {
                 <img src={logoImg} alt="brand logo" />
               </Link>
               <p className="copyright">
-                Copyrights © 2019 <b>Sanket Patel Photography</b>
-                <br />
-                All Rights Reserved.
+                <a href="mailto:kirsten@creativeeye.design">
+                  Built With ❤️By <b>Byron + Kirsten Delpinal</b>
+                </a>
               </p>
             </div>
           </div>

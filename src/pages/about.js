@@ -1,39 +1,52 @@
 import React, { Component } from "react"
 import Helmet from "react-helmet"
 import Layout from "../components/layout"
-import { graphql } from 'gatsby'
-import aboutImg from "../images/default.jpg"
+import { graphql } from "gatsby"
+import aboutImg from "../images/about.jpg"
 
 export class About extends Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
     return (
       <div>
-      <Helmet title={siteTitle} />
-      <Layout>
-        <section className="about-us pad-70">
-          <div className="container">
-            
-                <div className="row">
-                    <div className="col-lg-4">
-                        <div className="image-container">
-                                <img src={aboutImg} alt="about" />
-                        </div>
-                    </div>
-                    <div className="col-lg-8">
-                        <h4>About Me</h4>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-                        </p>
-                        <p>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32
-                        </p>
-                    </div>
-             
+        <Helmet title={siteTitle} />
+        <Layout>
+          <section className="about-us pad-70">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-4">
+                  <div className="image-container">
+                    <img src={aboutImg} alt="about" />
+                  </div>
+                </div>
+                <div className="col-lg-8">
+                  <h4>Why'd We Do This?</h4>
+                  <p>
+                    As the impact of the COVID-19 (aka Coronavirus) pandemic
+                    continues to evolve and transform our everyday lives, we’ve
+                    seen our local businesses and entrepreneurs suffer. With the
+                    cancellation of many community events and the motions for
+                    social distancing, these businesses have seen a sudden
+                    decline in demand for their services. We’ve created this
+                    site to give our local Akron businesses a platform to
+                    showcase all the great products and services they still have
+                    to offer so that we can continue to support them in these
+                    uncertain times.
+                  </p>
+                  <p>
+                    For more information about COVID-19, check out these great
+                    resources:
+                  </p>
+                  <ul>
+                    <li><a href="https://ohiochannel.org/" rel="noopener" target="_blank">The Ohio Channel</a></li>
+                    <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" rel="noopener" target="_blank">World Health Organization (WHO)</a></li>
+                    <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" rel="noopener" target="_blank">Centers for Disease Control & Prevention (CDC)</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-        </section>
-      </Layout>
+          </section>
+        </Layout>
       </div>
     )
   }
@@ -43,14 +56,11 @@ export default About
 
 export const pageQuery = graphql`
   query AboutQuery {
-   
-        site {
-          siteMetadata {
-            title
-            description
-          }
-        }    
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
   }
 `
-
-
