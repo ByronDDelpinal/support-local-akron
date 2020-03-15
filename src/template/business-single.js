@@ -60,7 +60,7 @@ class BusinessTemplate extends Component {
                   <h2 className="section-headline"> {business.name} </h2>
                   <p className="business-type">Type: {business.type}</p>
                   <p className="business-type">
-                    <a class="business-website" href={business.website} target="_blank" rel="noopener noreferrer">Check Out Their Website Here!</a>
+                    <a className="business-website" href={business.website} target="_blank" rel="noopener noreferrer">Check Out Their Website!</a>
                     </p>
                   <div className="business-content">
                     <h3>Our Story</h3>

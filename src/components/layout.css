@@ -510,7 +510,7 @@ a.entry-read-more {
 }
 
 .inner-blog-post .business-content {
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .inner-blog-post .business-content a {
@@ -812,6 +812,8 @@ h4.success-msg {
   flex-flow: row wrap;
   align-items: center;
   margin-bottom: 30px;
+  justify-content: center;
+  width: 100%;
 }
 .post-social .title {
   font-size: 14px;
@@ -820,7 +822,7 @@ h4.success-msg {
   margin-right: 10px;
 }
 .post-social .button {
-  margin: 0.5rem 0.25rem;
+  margin: 0.5rem 1.5rem;
   background-color: #fff;
   border-color: #dbdbdb;
   border-width: 1px;
@@ -833,18 +835,16 @@ h4.success-msg {
   -moz-appearance: none;
   -webkit-appearance: none;
   align-items: center;
-  border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: none;
   display: inline-flex;
-  font-size: 1rem;
+  font-size: 1.5rem;
   height: 2.25em;
   justify-content: flex-start;
   line-height: 1.5;
   padding: calc(0.375em - 1px) calc(0.625em - 1px);
   position: relative;
   vertical-align: top;
-  margin: 0.5rem 0.25rem;
 }
 .post-social .button.facebook {
   color: #3b5998;
@@ -875,4 +875,15 @@ h4.success-msg {
 
 .business-website {
   color: #35833f;
+}
+
+.social-share-image {
+  margin: 0 auto;
+  max-width: 40vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .social-share-image {
+    max-width: 100%;
+  }
 }

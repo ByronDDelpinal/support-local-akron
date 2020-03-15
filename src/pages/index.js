@@ -2,6 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Layout from "../components/layout"
+import Share from "../components/Share"
+import shareImg from "../images/support-social-card.png"
 
 // import SEO from "../components/seo"
 import Img from "gatsby-image"
@@ -71,6 +73,31 @@ class IndexPage extends React.Component {
                         <span />
                         See All
                       </Link>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pad-70">
+                  <h2 className="portfolio-title text-center  section-title">
+                    Help Spread The Word!
+                  </h2>
+                  <div className="col-md-10 offset-md-1 ">
+                    <div className="row">
+                      <Share
+                        socialConfig={{
+                          config: {
+                            url: "https://supportlocalakron.com",
+                            quote: "Don't distance yourself from Akron! Join me in continuing to support our local businesses. #SupportLocalAkron",
+                            hashtag: "SupportLocalAkron",
+                            title: this.props.data.site.siteMetadata.title,
+                          },
+                        }}
+                      />
+                      <img
+                        className="social-share-image"
+                        src={shareImg}
+                        alt="card with logo that encourages sharing the message"
+                      />
                     </div>
                   </div>
                 </div>

@@ -13,7 +13,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
 import 'bootstrap/dist/css/bootstrap.css';
-import logoImg from "../images/support-akron-logo.png"
+import shareImg from "../images/support-social-card.png"
 
 
 
@@ -53,7 +53,7 @@ const Template = ({ children }) => (
             },
             {
               name: "og:image",
-              content: logoImg
+              content: shareImg
             },
             {
               name: "og:url",
@@ -69,7 +69,7 @@ const Template = ({ children }) => (
             },
             {
               name: "twitter:image",
-              content: logoImg
+              content: shareImg
             },
           ]}
         >
