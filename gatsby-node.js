@@ -14,7 +14,6 @@ exports.createPages = ({ graphql, actions }) => {
             url
           }
           fluid(maxWidth: 1800) {
-            tracedSVG
             aspectRatio
             src
             srcSet

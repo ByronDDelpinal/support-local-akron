@@ -173,7 +173,6 @@ export const query = graphql`
             url
           }
           fluid(maxWidth: 1800) {
-            tracedSVG
             aspectRatio
             src
             srcSet

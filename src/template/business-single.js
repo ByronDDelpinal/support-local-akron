@@ -128,7 +128,6 @@ export const pageQuery = graphql`
           url
         }
         fluid(maxWidth: 1800) {
-          tracedSVG
           aspectRatio
           src
           srcSet
@@ -156,7 +155,6 @@ export const pageQuery = graphql`
             url
           }
           fluid(maxWidth: 1800) {
-            tracedSVG
             aspectRatio
             src
             srcSet
