@@ -35,13 +35,19 @@ export class Contact extends Component {
                         <h5>List Your Local Business</h5>
                         <p>
                           If you're a local business, or know about an awesome
-                          local business that should be here, let us know!
-                          We're hoping to expand the site to allow folks to
-                          list themselves, but until then, this form will have
-                          to do. Please fill out the information below, we'll
-                          get your business added ASAP. No local business is
-                          too small, large, obscure, or unique to be listed
-                          here. Every thing and every one matters. If the form doesn't work, or you'd prefer to answer these questions via email, please do so with <a href="mailto:kirsten@creativeeye.design?cc=byronddelpinal@gmail.com">this link</a>.
+                          local business that should be here, let us know! We're
+                          hoping to expand the site to allow folks to list
+                          themselves, but until then, this form will have to do.
+                          Please fill out the information below, we'll get your
+                          business added ASAP. No local business is too small,
+                          large, obscure, or unique to be listed here. Every
+                          thing and every one matters. If the form doesn't work,
+                          or you'd prefer to answer these questions via email,
+                          please do so with{" "}
+                          <a href="mailto:kirsten@creativeeye.design?cc=byronddelpinal@gmail.com">
+                            this link
+                          </a>
+                          .
                         </p>
                       </div>
                       <div className="field half">
@@ -67,7 +73,9 @@ export class Contact extends Component {
                         <span class="focus-input100"></span>
                       </div>
                       <div className="field half">
-                        <label htmlFor="website">Business Website (Include http://)</label>
+                        <label htmlFor="website">
+                          Business Website (Include http://)
+                        </label>
                         <input
                           type="text"
                           name="website"
@@ -79,13 +87,14 @@ export class Contact extends Component {
                       </div>
                       <div className="field half">
                         <label htmlFor="image">Business Photo</label>
-                        <input
-                          type="file"
-                          name="image"
-                          id="image"
-                          className="input100"
-                          required
-                        />
+                        <p>
+                          Our image uploader broke 🙁. I'm working on it, I promise! For now,
+                          either{" "}
+                          <a href="mailto:kirsten@creativeeye.design?cc=byronddelpinal@gmail.com">
+                            email it
+                          </a>{" "}
+                          to us or we'll take our best guess at it.
+                        </p>
                         <span class="focus-input100"></span>
                       </div>
                       <div className="field half">
@@ -147,7 +156,10 @@ export class Contact extends Component {
                         </li>
                       </ul>
                     </form>
-                    <p className="photo-credit">Background Photo Credit: <a href="https://www.shanewynn.com/">Shane Wynn</a></p>
+                    <p className="photo-credit">
+                      Background Photo Credit:{" "}
+                      <a href="https://www.shanewynn.com/">Shane Wynn</a>
+                    </p>
                   </div>
                 </div>
               </div>
