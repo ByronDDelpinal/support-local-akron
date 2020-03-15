@@ -40,7 +40,7 @@ export class Contact extends Component {
                           to do. Please fill out the information below, we'll
                           get your business added ASAP. No local business is
                           too small, large, obscure, or unique to be listed
-                          here. Every thing and every one matters. If the form doesn't work, or you'd prefer to answer these questions via email. Please do so with <a href="mailto:kirsten@creativeeye.design?cc=byronddelpinal@gmail.com">this link</a>.
+                          here. Every thing and every one matters. If the form doesn't work, or you'd prefer to answer these questions via email, please do so with <a href="mailto:kirsten@creativeeye.design?cc=byronddelpinal@gmail.com">this link</a>.
                         </p>
                       </div>
                       <div className="field half">
