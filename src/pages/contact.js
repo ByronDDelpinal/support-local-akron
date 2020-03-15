@@ -66,6 +66,17 @@ export class Contact extends Component {
                         <span class="focus-input100"></span>
                       </div>
                       <div className="field half">
+                        <label htmlFor="website">Business Website (Include http://)</label>
+                        <input
+                          type="text"
+                          name="website"
+                          id="website"
+                          className="input100"
+                          required
+                        />
+                        <span class="focus-input100"></span>
+                      </div>
+                      <div className="field half">
                         <label htmlFor="image">Business Photo</label>
                         <input
                           type="file"
