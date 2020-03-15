@@ -362,6 +362,11 @@ article.blog-listing {
   margin-bottom: 50px;
 }
 
+article.blog-listing .business-type {
+  font-size: 0.9rem;
+  padding: 0 20px;
+}
+
 article.blog-listing .entry-meta-content h2,
 article.blog-listing .entry-content {
   padding: 10px 20px;

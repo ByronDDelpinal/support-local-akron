@@ -20,7 +20,7 @@ export class BusinessIndex extends Component {
           <ul className="article-list row">
               {businesses.map(business => {
                 return (
-                  <li key={business.urlName} className="col-lg-6">
+                  <li data-type={business.type} key={business.urlName} className="col-lg-6">
                     <BusinessPreview business={business} />
                   </li>
                 )
