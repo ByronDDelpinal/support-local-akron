@@ -60,6 +60,7 @@ class BusinessTemplate extends Component {
                 </div>
                 <div className="post-content">
                   <h2 className="section-headline"> {business.name} </h2>
+                  <p class="business-type">Business Type: {business.type}</p>
                   <div className="business-content">
                     <h3>Our Story</h3>
                     {documentToReactComponents(businessStory)}
