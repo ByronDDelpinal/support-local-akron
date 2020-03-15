@@ -84,7 +84,7 @@ class IndexPage extends React.Component {
                     Help Spread The Word!
                   </h2>
                   <div className="col-md-10 offset-md-1 ">
-                    <div className="row">
+                    <div className="row social-share-row">
                       <Share
                         socialConfig={{
                           config: {
