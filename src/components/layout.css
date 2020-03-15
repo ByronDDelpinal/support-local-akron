@@ -127,6 +127,21 @@ section {
   );
 }
 
+.about-us h4 {
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about-us ul {
+  padding-left: 18px;
+}
+
+.about-us li {
+  list-style-type: square;
+}
+
 .cover {
   width: 100%;
   height: 100vh;
@@ -202,6 +217,10 @@ section {
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+
+.footer-wrapper{
+  background-color: #d1d3d4;
 }
 
 .footer-wrapper .copyright {
@@ -308,9 +327,7 @@ section {
 .pad-70 {
   padding: 70px 0px;
 }
-.bg-lightblue {
-  background-color: #f0faff;
-}
+
 .pad-20 {
   padding: 20px 0px;
 }
@@ -381,6 +398,11 @@ h2.section-title:after {
   margin: 20px auto 0 auto;
 }
 
+article.blog-listing h2.entry-title {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
 article.blog-listing h2.entry-title a {
   font-size: 20px;
   color: #35833f;
@@ -399,13 +421,14 @@ article.blog-listing {
 }
 
 article.blog-listing .business-type {
+  color: #808285;
   font-size: 0.9rem;
   padding: 0 20px;
 }
 
 article.blog-listing .entry-meta-content h2,
 article.blog-listing .entry-content {
-  padding: 10px 20px;
+  padding: 0 20px;
 }
 
 article.blog-listing .entry-media {
@@ -443,6 +466,18 @@ a.entry-read-more {
 
 a.entry-read-more:hover {
   color: #51a559;
+}
+
+.inner-blog-post .section-headline {
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  margin-bottom: 0 !important;
+  text-transform: uppercase;
+}
+
+.inner-blog-post .business-type {
+  color: #808285;
 }
 
 .hide {
@@ -504,8 +539,10 @@ a.entry-read-more:hover {
 
 .photo-credit {
   color: gray;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-style: italic;
+  text-align: right;
+  width: 100%;
 }
 
 .photo-credit a {
@@ -664,19 +701,24 @@ a.entry-read-more:hover {
   color: #000;
   font-size: 30px;
   font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
   margin-bottom: 30px;
 }
+
 .contact-form .field label {
   display: block;
   margin-bottom: 5px;
   font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
 }
+
 .contact-form .field {
   margin: 10px 0px;
   z-index: 1;
   position: relative;
 }
+
 .contact-form .field input,
 .contact-form .field textarea {
   display: block;
@@ -691,6 +733,7 @@ a.entry-read-more:hover {
   padding: 0 30px 0 50px;
   border: 0;
 }
+
 .contact-form .field textarea {
   height: 120px;
 }
@@ -721,7 +764,7 @@ a.entry-read-more:hover {
   text-transform: uppercase;
   font-size: 26px;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 50px;
   color: #fff;
   display: inline-block;
   padding: 0 25px;
@@ -858,6 +901,27 @@ h4.success-msg {
   margin: 0px 5px;
 }
 
+.post-content.top-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-content ~ .entry-media {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .post-content.top-content {
+    flex-wrap: wrap;
+  }
+}
+
+.post-content.top-content img {
+  margin-right: 6px;
+  width: 50px;
+}
+
 .post-social {
   display: flex;
   flex-flow: row wrap;
@@ -925,6 +989,10 @@ h4.success-msg {
 }
 
 .business-website {
+  color: #35833f;
+}
+
+.business-website:hover {
   color: #35833f;
 }
 

@@ -10,6 +10,7 @@ import Slider from "react-slick"
 import { DiscussionEmbed } from "disqus-react"
 import Share from "../components/Share"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import websiteLogo from "../images/website-logo.png"
 
 class BusinessTemplate extends Component {
   render() {
@@ -53,15 +54,24 @@ class BusinessTemplate extends Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-12 col-md-12">
+                <div className="post-content top-content">
+                  <div class="post-left-content">
+                    <h2 className="section-headline"> {business.name} </h2>
+                    <p className="business-type">{business.type}</p>
+                  </div>
+                  <p className="business-type website">
+                    <img
+                        className="website-logo"
+                        src={websiteLogo}
+                        alt="image of laptop computer"
+                      />
+                    <a className="business-website" href={business.website} target="_blank" rel="noopener noreferrer">Our Website</a>
+                  </p>
+                </div>
                 <div className="entry-media">
                   <Img fluid={business.image.fluid} backgroundColor={"#f4f8fb"} />
                 </div>
                 <div className="post-content">
-                  <h2 className="section-headline"> {business.name} </h2>
-                  <p className="business-type">Type: {business.type}</p>
-                  <p className="business-type">
-                    <a className="business-website" href={business.website} target="_blank" rel="noopener noreferrer">Check Out Their Website!</a>
-                    </p>
                   <div className="business-content">
                     <h3>Our Story</h3>
                     {documentToReactComponents(businessStory)}

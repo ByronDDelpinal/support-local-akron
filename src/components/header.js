@@ -17,16 +17,13 @@ export class Header extends Component {
               <nav id="main-menu" className="text-right">
                 <ul>
                   <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/about/">About</Link>
+                    <Link to="/about/">Purpose</Link>
                   </li>
                   <li>
                     <Link to="/business/">Local Businesses</Link>
                   </li>
                   <li>
-                    <Link to="/contact/">Contact</Link>
+                    <Link to="/contact/">Get Listed</Link>
                   </li>
                 </ul>
               </nav>
