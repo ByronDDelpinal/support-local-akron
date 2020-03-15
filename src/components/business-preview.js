@@ -28,7 +28,7 @@ class BusinessPreview extends Component {
                 : business.name.substring(0, MAX_LENGTH_Title)}{" "}
             </Link>
           </h2>
-          <p class="business-type">{business.type}</p>
+          <p className="business-type">{business.type}</p>
           <div className="entry-content">
             {documentToReactComponents(businessSupportSummary)}
           </div>

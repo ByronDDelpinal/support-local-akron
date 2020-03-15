@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Layout from "../components/layout"
 
@@ -67,6 +67,10 @@ class IndexPage extends React.Component {
                           </div>
                         )
                       })}
+                      <Link to="/business" className="entry-read-more">
+                        <span />
+                        See All
+                      </Link>
                     </div>
                   </div>
                 </div>

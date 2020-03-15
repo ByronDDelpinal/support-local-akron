@@ -13,6 +13,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
 import 'bootstrap/dist/css/bootstrap.css';
+import logoImg from "../images/support-akron-logo.png"
 
 
 
@@ -38,7 +39,38 @@ const Template = ({ children }) => (
               name: "description",
               content: data.site.siteMetadata.description,
             },
-            { name: "keywords", content: "sample, something" },
+            {
+              name: "keywords",
+              content: "local business, shop local, akron, ohio, small business, entrepreneur"
+            },
+            {
+              name: "og:title",
+              content: data.site.siteMetadata.title
+            },
+            {
+              name: "og:description",
+              content: data.site.siteMetadata.description
+            },
+            {
+              name: "og:image",
+              content: logoImg
+            },
+            {
+              name: "og:url",
+              content: "https://supportlocalakron.com"
+            },
+            {
+              name: "twitter:title",
+              content: data.site.siteMetadata.title
+            },
+            {
+              name: "twitter:description",
+              content: data.site.siteMetadata.description
+            },
+            {
+              name: "twitter:image",
+              content: logoImg
+            },
           ]}
         >
           <html lang="en" />

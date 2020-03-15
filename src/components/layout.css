@@ -393,7 +393,7 @@ article.blog-listing .entry-content-bottom {
   padding: 10px 20px;
 }
 
-article.blog-listing a.entry-read-more {
+a.entry-read-more {
   text-align: right;
   display: inline-block;
   font-family: "Josefin Sans", sans-serif;
