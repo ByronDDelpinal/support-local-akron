@@ -929,6 +929,7 @@ h4.success-msg {
 }
 
 .social-share-image {
+  border: 1px solid #58595b;
   margin: 0 auto;
   max-width: 40vw;
 }

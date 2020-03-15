@@ -45,30 +45,37 @@ const Template = ({ children }) => (
             },
             {
               name: "og:title",
+              property: "og:title",
               content: data.site.siteMetadata.title
             },
             {
               name: "og:description",
+              property: "og:description",
               content: data.site.siteMetadata.description
             },
             {
               name: "og:image",
+              property: "og:image",
               content: shareImg
             },
             {
               name: "og:url",
+              property: "og:url",
               content: "https://supportlocalakron.com"
             },
             {
               name: "twitter:title",
+              property: "twitter:title",
               content: data.site.siteMetadata.title
             },
             {
               name: "twitter:description",
+              property: "twitter:description",
               content: data.site.siteMetadata.description
             },
             {
               name: "twitter:image",
+              property: "twitter:image",
               content: shareImg
             },
           ]}
