@@ -122,7 +122,7 @@ export class Contact extends Component {
                         <li>
                           <input
                             type="submit"
-                            value="Send Message"
+                            value="Send"
                             className="contact100-form-btn special"
                           />
                         </li>
