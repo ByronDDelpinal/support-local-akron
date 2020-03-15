@@ -13,11 +13,13 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 class BusinessTemplate extends Component {
   render() {
+    console.log(this.props)
+    // Assign the list of all businesses
+
+    // Find the one that matches the page we're on
     const business = this.props.data.contentfulBusinesses;
     const siteurl = this.props.data.site.siteMetadata.url;
     const twitterhandle = this.props.data.site.siteMetadata.twitterHandle;
-    const Imageurl = business.image;
-    const post = this.props.data.allContentfulBusinesses.nodes;
 
     const businessStory = {
       nodeType: "document",
@@ -60,7 +62,7 @@ class BusinessTemplate extends Component {
                 </div>
                 <div className="post-content">
                   <h2 className="section-headline"> {business.name} </h2>
-                  <p class="business-type">Business Type: {business.type}</p>
+                  <p className="business-type">Business Type: {business.type}</p>
                   <div className="business-content">
                     <h3>Our Story</h3>
                     {documentToReactComponents(businessStory)}
@@ -162,10 +164,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-/* NAHHHH */
-// childContentfulPortfolioBlogDescriptionTextNode{
-//   childMarkdownRemark{
-//     html
-//   }
-// }

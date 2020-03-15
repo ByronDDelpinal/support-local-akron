@@ -17,7 +17,7 @@ export class About extends Component {
                 <div className="col-lg-4">
                   <div className="image-container">
                     <img src={aboutImg} alt="about" />
-                    <p class="photo-credit">Photo Credit: <a href="https://www.shanewynn.com/">Shane Wynn</a></p>
+                    <p className="photo-credit">Photo Credit: <a href="https://www.shanewynn.com/">Shane Wynn</a></p>
                   </div>
                 </div>
                 <div className="col-lg-8">

@@ -39,7 +39,7 @@ exports.createPages = ({ graphql, actions }) => {
           // in page queries as GraphQL variables.
           name: business.name,
           image: business.image,
-          slug: business.urlName,
+          urlName: business.urlName,
           type: business.type
         },
       })
@@ -47,15 +47,15 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-
-
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-	const { createNodeField } = boundActionCreators;
+  const { createNodeField } = boundActionCreators;
 
-	if (node.internal.type === `contentfulPortfolio`) {
+  console.log(node)
+
+	if (node.internal.type === `ContentfulBusinesses`) {
 		const value = createFilePath({ node, getNode });
 		createNodeField({
-			name: `slug`,
+			name: node.urlName,
 			node,
 			value,
 		});
