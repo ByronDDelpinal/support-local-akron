@@ -46,18 +46,3 @@ exports.createPages = ({ graphql, actions }) => {
     })
   })
 }
-
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators;
-
-  console.log(node)
-
-	if (node.internal.type === `ContentfulBusinesses`) {
-		const value = createFilePath({ node, getNode });
-		createNodeField({
-			name: node.urlName,
-			node,
-			value,
-		});
-	}
-};

@@ -13,10 +13,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 class BusinessTemplate extends Component {
   render() {
-    console.log(this.props)
-    // Assign the list of all businesses
-
-    // Find the one that matches the page we're on
     const business = this.props.data.contentfulBusinesses;
     const siteurl = this.props.data.site.siteMetadata.url;
     const twitterhandle = this.props.data.site.siteMetadata.twitterHandle;
