@@ -1050,16 +1050,11 @@ h4.success-msg {
   cursor: pointer;
 }
 
-.facets .facet.selected {
+.facets .facet.selected,
+.facets .facet.selected:hover {
   background: #35833f;
   border-color: transparent;
   color: #fff;
-}
-
-.facets .facet.selected:hover {
-  background: #fff;
-  border-color: #35833f;
-  color: #35833f;
 }
 
 .facets .facet:last-child {
