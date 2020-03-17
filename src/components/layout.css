@@ -1014,3 +1014,58 @@ h4.success-msg {
     max-width: 100%;
   }
 }
+
+/******** Business Index ********/
+
+/** Facets **/
+.facets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.facets .facet {
+  border: 1px solid #35833f;
+  border-radius: 25px;
+  background: transparent;
+  color: #35833f;
+  display: inline-block;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin: 10px 5px;
+  outline: none !important;
+  padding: 8px 25px 4px 25px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  text-transform: uppercase;
+  transition: all 0.4s;
+}
+
+.facets .facet:hover {
+  background: #35833f;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.facets .facet.selected {
+  background: #35833f;
+  border-color: transparent;
+  color: #fff;
+}
+
+.facets .facet.selected:hover {
+  background: #fff;
+  border-color: #35833f;
+  color: #35833f;
+}
+
+.facets .facet:last-child {
+  appearance: none;
+  border-radius: 0;
+  padding: 8px 15px 4px 15px;
+  position: relative;
+  width: 9rem;
+}
