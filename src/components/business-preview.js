@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
+import { INLINES } from '@contentful/rich-text-types';
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import Img from "gatsby-image"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
@@ -12,6 +14,12 @@ function BusinessPreview(props) {
     data: {},
     content: business.supportSummary ? business.supportSummary.json.content : []
   }
+
+  const businessSupportSummaryOptions = {
+    renderNode: {
+      [INLINES.HYPERLINK]: (node, children) => <OutboundLink href={node.data.uri} rel="noopener noreferrer" target="_blank">{children}</OutboundLink>,
+    },
+  };
 
   return (
     <article className="blog-listing" key={business.urlName}>
@@ -29,7 +37,7 @@ function BusinessPreview(props) {
         </h2>
         <p className="business-type">{business.type}</p>
         <div className="entry-content">
-          {documentToReactComponents(businessSupportSummary)}
+          {documentToReactComponents(businessSupportSummary, businessSupportSummaryOptions)}
         </div>
       </div>
 

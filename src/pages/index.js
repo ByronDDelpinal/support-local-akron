@@ -4,6 +4,8 @@ import Helmet from "react-helmet"
 import Layout from "../components/layout"
 import Share from "../components/Share"
 import shareImg from "../images/support-social-card.png"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+
 
 // import SEO from "../components/seo"
 import Img from "gatsby-image"
@@ -103,7 +105,7 @@ class IndexPage extends React.Component {
                     </div>
                   </div>
                 </div>
-                <p className="photo-credit">Header Photo Credit: <a href="http://northsidemarketplace.com/">Northside Marketplace</a></p>
+                <p className="photo-credit">Header Photo Credit: <OutboundLink href="http://northsidemarketplace.com/">Northside Marketplace</OutboundLink></p>
 
                 {/* <div className="pad-70">
                   <h2 className="portfolio-title text-center  section-title">

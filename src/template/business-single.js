@@ -3,13 +3,17 @@ import Layout from "../components/layout"
 // import Sidebar from "../components/sidebar"
 import Helmet from "react-helmet"
 import { Link, graphql } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+
 import Img from "gatsby-image"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick"
 import { DiscussionEmbed } from "disqus-react"
 import Share from "../components/Share"
+import { INLINES } from '@contentful/rich-text-types';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+
 import websiteLogo from "../images/website-logo.png"
 
 class BusinessTemplate extends Component {
@@ -29,6 +33,12 @@ class BusinessTemplate extends Component {
       data: {},
       content: business.supportFull ? business.supportFull.json.content : []
     }
+
+    const businessSupportOptions = {
+      renderNode: {
+        [INLINES.HYPERLINK]: (node, children) => <OutboundLink href={node.data.uri} rel="noopener noreferrer" target="_blank">{children}</OutboundLink>,
+      },
+    };
 
     const socialConfigss = {
       site: {
@@ -65,7 +75,7 @@ class BusinessTemplate extends Component {
                         src={websiteLogo}
                         alt="image of laptop computer"
                       />
-                    <a className="business-website" href={business.website} target="_blank" rel="noopener noreferrer">Our Website</a>
+                    <OutboundLink className="business-website" href={business.website} target="_blank" rel="noopener noreferrer">Our Website</OutboundLink>
                   </p>
                 </div>
                 <div className="entry-media">
@@ -74,11 +84,11 @@ class BusinessTemplate extends Component {
                 <div className="post-content">
                   <div className="business-content">
                     <h3>Our Story</h3>
-                    {documentToReactComponents(businessStory)}
+                    {documentToReactComponents(businessStory, businessSupportOptions)}
                   </div>
                   <div className="business-content">
                     <h3>How To Support Us</h3>
-                    {documentToReactComponents(businessSupportFull)}
+                    {documentToReactComponents(businessSupportFull, businessSupportOptions)}
                   </div>
                 </div>
               </div>

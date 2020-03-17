@@ -3,6 +3,8 @@ import Helmet from "react-helmet"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import ContactImg from "../images/img-01.png"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+
 
 export class Contact extends Component {
   render() {
@@ -158,7 +160,7 @@ export class Contact extends Component {
                     </form>
                     <p className="photo-credit">
                       Background Photo Credit:{" "}
-                      <a href="https://www.shanewynn.com/">Shane Wynn</a>
+                      <OutboundLink href="https://www.shanewynn.com/">Shane Wynn</OutboundLink>
                     </p>
                   </div>
                 </div>

@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Helmet from "react-helmet"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import aboutImg from "../images/about.jpg"
 
 export class About extends Component {
@@ -17,7 +18,7 @@ export class About extends Component {
                 <div className="col-lg-4">
                   <div className="image-container">
                     <img src={aboutImg} alt="about" />
-                    <p className="photo-credit">Photo Credit: <a href="https://www.shanewynn.com/">Shane Wynn</a></p>
+                    <p className="photo-credit">Photo Credit: <OutboundLink href="https://www.shanewynn.com/">Shane Wynn</OutboundLink></p>
                   </div>
                 </div>
                 <div className="col-lg-8">
@@ -39,9 +40,9 @@ export class About extends Component {
                     resources:
                   </p>
                   <ul>
-                    <li><a href="https://ohiochannel.org/" rel="noopener noreferrer" target="_blank">The Ohio Channel</a></li>
-                    <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" rel="noopener noreferrer" target="_blank">World Health Organization (WHO)</a></li>
-                    <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" rel="noopener noreferrer" target="_blank">Centers for Disease Control & Prevention (CDC)</a></li>
+                    <li><OutboundLink href="https://ohiochannel.org/" rel="noopener noreferrer" target="_blank">The Ohio Channel</OutboundLink></li>
+                    <li><OutboundLink href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" rel="noopener noreferrer" target="_blank">World Health Organization (WHO)</OutboundLink></li>
+                    <li><OutboundLink href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" rel="noopener noreferrer" target="_blank">Centers for Disease Control & Prevention (CDC)</OutboundLink></li>
                   </ul>
                 </div>
               </div>
