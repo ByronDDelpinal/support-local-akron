@@ -92,11 +92,11 @@ function BusinessIndex(props) {
   const [categories, setCategories] = useState(getUniqueCategories())
 
   return (
-    <div>
+    <div class="business-index-page">
       <Helmet title={siteTitle} />
       <Layout>
         <div className="container">
-          <div className="text-center pad-40">
+          <div className="text-center pad-20">
             <h2 className="section-title">Local Businesses</h2>
           </div>
           <div className="facets">

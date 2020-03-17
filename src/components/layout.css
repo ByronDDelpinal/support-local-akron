@@ -1017,11 +1017,17 @@ h4.success-msg {
 
 /******** Business Index ********/
 
+/** Page **/
+.business-index-page .section-title {
+  margin-bottom: 0;
+}
+
 /** Facets **/
 .facets {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 10px 0;
 }
 
 .facets .facet {
