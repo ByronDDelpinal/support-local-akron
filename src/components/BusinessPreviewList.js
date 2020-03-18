@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react';
 
-import BusinessPreview from "./BusinessPreview"
+import BusinessPreview from './BusinessPreview';
 
 function BusinessPreviewList(props) {
   return (
@@ -14,10 +14,10 @@ function BusinessPreviewList(props) {
           >
             <BusinessPreview business={business} />
           </li>
-        )
+        );
       })}
     </ul>
-  )
+  );
 }
 
-export default BusinessPreviewList
+export default BusinessPreviewList;

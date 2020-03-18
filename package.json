@@ -5,9 +5,7 @@
   "author": "Byron Delpinal <byronddelpinal@gmail.com>",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-brands-svg-icons": "^5.8.1",
-    "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "bootstrap": "^4.3.1",
     "gatsby": "^2.13.4",
@@ -17,12 +15,10 @@
     "gatsby-plugin-favicon": "^3.1.5",
     "gatsby-plugin-google-analytics": "^2.1.37",
     "gatsby-plugin-manifest": "^2.0.22",
-    "gatsby-plugin-offline": "^2.0.24",
     "gatsby-plugin-react-helmet": "^3.0.8",
     "gatsby-plugin-sharp": "^2.0.25",
     "gatsby-source-contentful": "^2.0.35",
     "gatsby-source-filesystem": "^2.0.23",
-    "gatsby-source-instagram": "^0.4.0",
     "gatsby-transformer-remark": "^2.3.7",
     "gatsby-transformer-sharp": "^2.1.15",
     "glamor": "^2.20.40",
@@ -36,7 +32,6 @@
     "react-image-lightbox": "^5.1.0",
     "react-responsive-tabs": "^3.1.0",
     "react-share": "^4.1.0",
-    "react-tabs": "^3.0.0"
   },
   "devDependencies": {
     "dotenv": "^8.0.0",
@@ -53,7 +48,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Should probs do this...\""
   },
   "repository": {
     "type": "git",

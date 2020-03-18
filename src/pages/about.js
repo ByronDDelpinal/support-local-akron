@@ -1,14 +1,14 @@
-import { graphql } from "gatsby"
-import Helmet from "react-helmet"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import React, { Component } from "react"
+import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import React, { Component } from 'react';
 
-import aboutImg from "../images/about.jpg"
-import Layout from "../components/Layout"
+import aboutImg from '../images/about.jpg';
+import Layout from '../components/Layout';
 
 export class About extends Component {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const siteTitle = this.props.data.site.siteMetadata.title;
     return (
       <div>
         <Helmet title={siteTitle} />
@@ -20,7 +20,7 @@ export class About extends Component {
                   <div className="image-container">
                     <img src={aboutImg} alt="about" />
                     <p className="photo-credit">
-                      Photo Credit:{" "}
+                      Photo Credit:{' '}
                       <OutboundLink href="https://www.shanewynn.com/">
                         Shane Wynn
                       </OutboundLink>
@@ -80,11 +80,11 @@ export class About extends Component {
           </section>
         </Layout>
       </div>
-    )
+    );
   }
 }
 
-export default About
+export default About;
 
 export const pageQuery = graphql`
   query AboutQuery {
@@ -95,4 +95,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

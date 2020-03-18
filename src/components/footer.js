@@ -1,7 +1,7 @@
-import { Link } from "gatsby"
-import React, { Component } from "react"
+import { Link } from 'gatsby';
+import React, { Component } from 'react';
 
-import logoImg from "../images/support-akron-logo.png"
+import logoImg from '../images/support-akron-logo.png';
 
 export class Footer extends Component {
   render() {
@@ -15,10 +15,10 @@ export class Footer extends Component {
               </Link>
               <p className="copyright">
                 <a href="mailto:kirsten@creativeeye.design">
-                  Built With{" "}
+                  Built With{' '}
                   <span aria-label="heart" role="img">
                     ❤️
-                  </span>{" "}
+                  </span>{' '}
                   By <b>Byron + Kirsten Delpinal</b>
                 </a>
               </p>
@@ -26,8 +26,8 @@ export class Footer extends Component {
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
 
-export default Footer
+export default Footer;

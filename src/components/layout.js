@@ -5,15 +5,15 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import Header from "./Header"
-import Footer from "./Footer"
-import Helmet from "react-helmet"
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 
-import "./layout.css"
+import './layout.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import shareImg from "../images/support-social-card.png"
+import shareImg from '../images/support-social-card.png';
 
 const Template = ({ children }) => (
   <StaticQuery
@@ -23,7 +23,6 @@ const Template = ({ children }) => (
           siteMetadata {
             title
             description
-
           }
         }
       }
@@ -34,61 +33,60 @@ const Template = ({ children }) => (
           title={data.site.siteMetadata.title}
           meta={[
             {
-              name: "description",
+              name: 'description',
               content: data.site.siteMetadata.description,
             },
             {
-              name: "keywords",
-              content: "local business, shop local, akron, ohio, small business, entrepreneur"
+              name: 'keywords',
+              content:
+                'local business, shop local, akron, ohio, small business, entrepreneur',
             },
             {
-              name: "og:title",
-              property: "og:title",
-              content: data.site.siteMetadata.title
+              name: 'og:title',
+              property: 'og:title',
+              content: data.site.siteMetadata.title,
             },
             {
-              name: "og:description",
-              property: "og:description",
-              content: data.site.siteMetadata.description
+              name: 'og:description',
+              property: 'og:description',
+              content: data.site.siteMetadata.description,
             },
             {
-              name: "og:image",
-              property: "og:image",
-              content: shareImg
+              name: 'og:image',
+              property: 'og:image',
+              content: shareImg,
             },
             {
-              name: "og:url",
-              property: "og:url",
-              content: "https://supportlocalakron.com"
+              name: 'og:url',
+              property: 'og:url',
+              content: 'https://supportlocalakron.com',
             },
             {
-              name: "twitter:title",
-              property: "twitter:title",
-              content: data.site.siteMetadata.title
+              name: 'twitter:title',
+              property: 'twitter:title',
+              content: data.site.siteMetadata.title,
             },
             {
-              name: "twitter:description",
-              property: "twitter:description",
-              content: data.site.siteMetadata.description
+              name: 'twitter:description',
+              property: 'twitter:description',
+              content: data.site.siteMetadata.description,
             },
             {
-              name: "twitter:image",
-              property: "twitter:image",
-              content: shareImg
+              name: 'twitter:image',
+              property: 'twitter:image',
+              content: shareImg,
             },
           ]}
         >
           <html lang="en" />
         </Helmet>
         <Header />
-        <div className="main-content">
-        {children}
-        </div>
+        <div className="main-content">{children}</div>
 
         <Footer />
       </>
     )}
   />
-)
+);
 
-export default Template
+export default Template;

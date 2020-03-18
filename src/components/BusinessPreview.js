@@ -1,22 +1,22 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import Img from "gatsby-image"
-import { INLINES } from "@contentful/rich-text-types"
-import { Link } from "gatsby"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import React from "react"
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Img from 'gatsby-image';
+import { INLINES } from '@contentful/rich-text-types';
+import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import React from 'react';
 
 function BusinessPreview(props) {
-  const MAX_LENGTH_TITLE = 80
-  const { business } = props
+  const MAX_LENGTH_TITLE = 80;
+  const { business } = props;
 
   // Creates a document from a Contenful Rich Text Field
   const businessSupportSummary = {
-    nodeType: "document",
+    nodeType: 'document',
     data: {},
     content: business.supportSummary
       ? business.supportSummary.json.content
       : [],
-  }
+  };
 
   // Overrides the way we handle the inline hypertext item in a document. This
   // adds outbound linking so we can track if traffic is actually going to
@@ -33,20 +33,20 @@ function BusinessPreview(props) {
         </OutboundLink>
       ),
     },
-  }
+  };
 
   return (
     <article className="blog-listing" key={business.urlName}>
       <div className="entry-meta-content">
         <div className="entry-media">
-          <Img fluid={business.image.fluid} backgroundColor={"#f4f8fb"} />
+          <Img fluid={business.image.fluid} backgroundColor={'#f4f8fb'} />
         </div>
         <h2 className="entry-title">
           <Link to={business.urlName}>
-            {" "}
+            {' '}
             {business.name > MAX_LENGTH_TITLE
               ? business.name
-              : business.name.substring(0, MAX_LENGTH_TITLE)}{" "}
+              : business.name.substring(0, MAX_LENGTH_TITLE)}{' '}
           </Link>
         </h2>
         <p className="business-type">{business.type}</p>
@@ -65,7 +65,7 @@ function BusinessPreview(props) {
         </Link>
       </div>
     </article>
-  )
+  );
 }
 
-export default BusinessPreview
+export default BusinessPreview;

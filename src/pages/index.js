@@ -1,19 +1,19 @@
-import { graphql, Link } from "gatsby"
-import Helmet from "react-helmet"
-import Img from "gatsby-image"
-import React from "react"
+import { graphql, Link } from 'gatsby';
+import Helmet from 'react-helmet';
+import Img from 'gatsby-image';
+import React from 'react';
 
-import BusinessPreview from "../components/BusinessPreview"
-import Layout from "../components/Layout"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import Share from "../components/Share"
-import shareImg from "../images/support-social-card.png"
+import BusinessPreview from '../components/BusinessPreview';
+import Layout from '../components/Layout';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import Share from '../components/Share';
+import shareImg from '../images/support-social-card.png';
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const businesses = this.props.data.allContentfulBusinesses.nodes
-    const coverphoto = this.props.data.coverImg
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const businesses = this.props.data.allContentfulBusinesses.nodes;
+    const coverphoto = this.props.data.coverImg;
 
     return (
       <Layout>
@@ -25,11 +25,11 @@ class IndexPage extends React.Component {
               alt="Air Balloon in Nature"
               fluid={coverphoto.childImageSharp.fluid}
               style={{
-                position: "relative",
+                position: 'relative',
                 left: 0,
                 top: 0,
-                width: "100%",
-                height: "100%",
+                width: '100%',
+                height: '100%',
               }}
             />
             <div className="overlay">
@@ -59,7 +59,7 @@ class IndexPage extends React.Component {
                           <div key={business.id} className="col-md-6">
                             <BusinessPreview business={business} />
                           </div>
-                        )
+                        );
                       })}
                       <div className="see-all-wrapper">
                         <Link
@@ -80,12 +80,12 @@ class IndexPage extends React.Component {
                   <div className="col-md-10 offset-md-1 ">
                     <p>
                       We're all in this together. Please share this site with
-                      anyone you know.{" "}
+                      anyone you know.{' '}
                       <b>
                         Encourage local artists, musicians, and business owners
                         to join
-                      </b>{" "}
-                      and tell us how we can support them.{" "}
+                      </b>{' '}
+                      and tell us how we can support them.{' '}
                       <b>Encourage your friends to browse </b> and find new
                       things they'll love and new local things to support!
                     </p>
@@ -93,10 +93,10 @@ class IndexPage extends React.Component {
                       <Share
                         socialConfig={{
                           config: {
-                            url: "https://supportlocalakron.com",
+                            url: 'https://supportlocalakron.com',
                             quote:
                               "Don't distance yourself from Akron! Join me in continuing to support our local artists, musicians, and businesses. #SupportLocalAkron",
-                            hashtag: "SupportLocalAkron",
+                            hashtag: 'SupportLocalAkron',
                             title: this.props.data.site.siteMetadata.title,
                           },
                         }}
@@ -110,7 +110,7 @@ class IndexPage extends React.Component {
                   </div>
                 </div>
                 <p className="photo-credit">
-                  Header Photo Credit:{" "}
+                  Header Photo Credit:{' '}
                   <OutboundLink href="http://northsidemarketplace.com/">
                     Northside Marketplace
                   </OutboundLink>
@@ -120,11 +120,11 @@ class IndexPage extends React.Component {
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query siteIndexQuery {
@@ -167,4 +167,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

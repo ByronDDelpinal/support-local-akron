@@ -1,7 +1,7 @@
-import Link from "gatsby-link"
-import React, { Component } from "react"
+import Link from 'gatsby-link';
+import React, { Component } from 'react';
 
-import logoImg from "../images/support-akron-logo.png"
+import logoImg from '../images/support-akron-logo.png';
 
 export class Header extends Component {
   render() {
@@ -32,8 +32,8 @@ export class Header extends Component {
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;

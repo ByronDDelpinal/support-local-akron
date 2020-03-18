@@ -1,17 +1,17 @@
-import React, { Component } from "react"
-import { graphql } from "gatsby"
-import Helmet from "react-helmet"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import React, { Component } from 'react';
+import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
-import ContactImg from "../images/img-01.png"
-import Layout from "../components/Layout"
+import ContactImg from '../images/img-01.png';
+import Layout from '../components/Layout';
 
 // The form on this page works because it's deployed to Netlify and they
 // do some magic around it that makes it work. If you're not deploying there,
 // you may need to handle the form submit on your own.
 export class Contact extends Component {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const siteTitle = this.props.data.site.siteMetadata.title;
 
     return (
       <div className="contactImage">
@@ -47,7 +47,7 @@ export class Contact extends Component {
                           business is too small, large, obscure, or unique to be
                           listed here. Every thing and every one matters. If the
                           form doesn't work, or you'd prefer to answer these
-                          questions via email, please do so with{" "}
+                          questions via email, please do so with{' '}
                           <a href="mailto:kirsten@creativeeye.design?cc=byronddelpinal@gmail.com">
                             this link
                           </a>
@@ -92,14 +92,14 @@ export class Contact extends Component {
                       <div className="field half">
                         <label htmlFor="image">Organization Photo</label>
                         <p>
-                          Our image uploader broke{" "}
+                          Our image uploader broke{' '}
                           <span aria-label="frowning face" role="img">
                             🙁
                           </span>
-                          . I'm working on it, I promise! For now, either{" "}
+                          . I'm working on it, I promise! For now, either{' '}
                           <a href="mailto:kirsten@creativeeye.design?cc=byronddelpinal@gmail.com">
                             email it
-                          </a>{" "}
+                          </a>{' '}
                           to us or we'll take our best guess at it.
                         </p>
                         <span class="focus-input100"></span>
@@ -164,7 +164,7 @@ export class Contact extends Component {
                       </ul>
                     </form>
                     <p className="photo-credit">
-                      Background Photo Credit:{" "}
+                      Background Photo Credit:{' '}
                       <OutboundLink href="https://www.shanewynn.com/">
                         Shane Wynn
                       </OutboundLink>
@@ -176,11 +176,11 @@ export class Contact extends Component {
           </Layout>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Contact
+export default Contact;
 
 export const pageQuery = graphql`
   query ContactQuery {
@@ -191,4 +191,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

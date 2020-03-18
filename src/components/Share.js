@@ -1,16 +1,16 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   FacebookShareButton,
   TwitterShareButton,
   LinkedinShareButton,
-} from "react-share"
+} from 'react-share';
 import {
   faFacebookF,
   faTwitter,
   faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Share = ({ socialConfig }) => {
   return (
@@ -47,8 +47,8 @@ const Share = ({ socialConfig }) => {
         <span className="text">LinkedIn</span>
       </LinkedinShareButton>
     </div>
-  )
-}
+  );
+};
 
 Share.propTypes = {
   socialConfig: PropTypes.shape({
@@ -59,8 +59,7 @@ Share.propTypes = {
       hashtag: PropTypes.string,
     }),
   }).isRequired,
-}
-Share.defaultProps = {
-}
+};
+Share.defaultProps = {};
 
-export default Share
+export default Share;

@@ -1,7 +1,7 @@
-import Link from "gatsby-link"
-import React, { Component } from "react"
+import Link from 'gatsby-link';
+import React, { Component } from 'react';
 
-import Layout from "../components/Layout"
+import Layout from '../components/Layout';
 
 export class Sucess extends Component {
   render() {
@@ -20,7 +20,7 @@ export class Sucess extends Component {
                   </h4>
                   <div
                     className="col-lg-12 text-center"
-                    style={{ marginTop: "20px" }}
+                    style={{ marginTop: '20px' }}
                   >
                     <Link to="/" className="backtohome contact100-form-btn">
                       Back To Home
@@ -32,8 +32,8 @@ export class Sucess extends Component {
           </Layout>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Sucess
+export default Sucess;

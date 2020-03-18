@@ -1,32 +1,32 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { graphql } from "gatsby"
-import Helmet from "react-helmet"
-import Img from "gatsby-image"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import React, { Component } from "react"
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
+import Img from 'gatsby-image';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import React, { Component } from 'react';
 
-import { INLINES } from "@contentful/rich-text-types"
-import Layout from "../components/Layout"
+import { INLINES } from '@contentful/rich-text-types';
+import Layout from '../components/Layout';
 // import Sidebar from "../components/sidebar"
-import websiteLogo from "../images/website-logo.png"
+import websiteLogo from '../images/website-logo.png';
 
 class BusinessTemplate extends Component {
   render() {
-    const business = this.props.data.contentfulBusinesses
+    const business = this.props.data.contentfulBusinesses;
 
     // Creates a document from a Contenful Rich Text Field
     const businessStory = {
-      nodeType: "document",
+      nodeType: 'document',
       data: {},
       content: business.story ? business.story.json.content : [],
-    }
+    };
 
     // Creates a document from a Contenful Rich Text Field
     const businessSupportFull = {
-      nodeType: "document",
+      nodeType: 'document',
       data: {},
       content: business.supportFull ? business.supportFull.json.content : [],
-    }
+    };
 
     // Overrides the way we handle the inline hypertext item in a document. This
     // adds outbound linking so we can track if traffic is actually going to
@@ -43,7 +43,7 @@ class BusinessTemplate extends Component {
           </OutboundLink>
         ),
       },
-    }
+    };
 
     return (
       <Layout>
@@ -76,7 +76,7 @@ class BusinessTemplate extends Component {
                 <div className="entry-media">
                   <Img
                     fluid={business.image.fluid}
-                    backgroundColor={"#f4f8fb"}
+                    backgroundColor={'#f4f8fb'}
                   />
                 </div>
                 <div className="post-content">
@@ -109,11 +109,11 @@ class BusinessTemplate extends Component {
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default BusinessTemplate
+export default BusinessTemplate;
 
 export const pageQuery = graphql`
   query businessQuery($urlName: String) {
@@ -166,4 +166,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
