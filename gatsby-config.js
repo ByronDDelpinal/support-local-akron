@@ -62,12 +62,6 @@ module.exports = {
       options: { prefixes: [`/portfolio/*`] },
     },
     {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `sanket_patel_me`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
