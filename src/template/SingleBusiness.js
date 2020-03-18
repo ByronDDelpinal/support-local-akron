@@ -6,7 +6,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React, { Component } from 'react';
 
 import { INLINES } from '@contentful/rich-text-types';
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 // import Sidebar from "../components/sidebar"
 import websiteLogo from '../images/website-logo.png';
 

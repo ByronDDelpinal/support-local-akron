@@ -48,7 +48,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/portfolio/*`] },
+      options: { prefixes: [`/business/*`] },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
