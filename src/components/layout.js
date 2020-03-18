@@ -15,8 +15,6 @@ import "./layout.css"
 import 'bootstrap/dist/css/bootstrap.css';
 import shareImg from "../images/support-social-card.png"
 
-
-
 const Template = ({ children }) => (
   <StaticQuery
     query={graphql`

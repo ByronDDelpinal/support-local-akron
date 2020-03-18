@@ -4,13 +4,11 @@ import {
   FacebookShareButton,
   TwitterShareButton,
   LinkedinShareButton,
-  RedditShareButton,
 } from "react-share"
 import {
   faFacebookF,
   faTwitter,
   faLinkedin,
-  faReddit
 } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 

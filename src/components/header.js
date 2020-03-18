@@ -20,7 +20,7 @@ export class Header extends Component {
                     <Link to="/about/">Purpose</Link>
                   </li>
                   <li>
-                    <Link to="/business/">Local Businesses</Link>
+                    <Link to="/business/">Local Listings</Link>
                   </li>
                   <li>
                     <Link to="/contact/">Get Listed</Link>

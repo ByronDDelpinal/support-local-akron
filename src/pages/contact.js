@@ -34,10 +34,9 @@ export class Contact extends Component {
                       <input type="hidden" name="form-name" value="contact" />
                       <input type="hidden" name="bot-field" />
                       <div>
-                        <h5>List Your Local Business</h5>
+                        <h5>List Your Local Organization</h5>
                         <p>
-                          If you're a local business, or know about an awesome
-                          local business that should be here, let us know! We're
+                          If you're a local artist, musician, or business, let us know! We're
                           hoping to expand the site to allow folks to list
                           themselves, but until then, this form will have to do.
                           Please fill out the information below, we'll get your
@@ -53,7 +52,7 @@ export class Contact extends Component {
                         </p>
                       </div>
                       <div className="field half">
-                        <label htmlFor="name">Business Name</label>
+                        <label htmlFor="name">Organization Name</label>
                         <input
                           type="text"
                           name="name"
@@ -64,7 +63,7 @@ export class Contact extends Component {
                         <span class="focus-input100"></span>
                       </div>
                       <div className="field half">
-                        <label htmlFor="email">Business Email</label>
+                        <label htmlFor="email">Organization Email</label>
                         <input
                           type="text"
                           name="email"
@@ -76,7 +75,7 @@ export class Contact extends Component {
                       </div>
                       <div className="field half">
                         <label htmlFor="website">
-                          Business Website (Include http://)
+                        Organization Website (Include http://)
                         </label>
                         <input
                           type="text"
@@ -88,7 +87,7 @@ export class Contact extends Component {
                         <span class="focus-input100"></span>
                       </div>
                       <div className="field half">
-                        <label htmlFor="image">Business Photo</label>
+                        <label htmlFor="image">Organization Photo</label>
                         <p>
                           Our image uploader broke 🙁. I'm working on it, I promise! For now,
                           either{" "}
@@ -101,7 +100,7 @@ export class Contact extends Component {
                       </div>
                       <div className="field half">
                         <label htmlFor="type">
-                          What Type Of Business Are You?
+                          What Type Of Organization Are You?
                         </label>
                         <input
                           type="text"

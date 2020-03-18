@@ -6,7 +6,6 @@ import Share from "../components/Share"
 import shareImg from "../images/support-social-card.png"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-
 // import SEO from "../components/seo"
 import Img from "gatsby-image"
 import BusinessPreview from "../components/business-preview"
@@ -49,7 +48,7 @@ class IndexPage extends React.Component {
                   <b>SUPPORT LOCAL AKRON</b>
                 </h1>
                 <h5 className="greetings">
-                  Show your love to our amazing local businesses
+                  Show your love to our amazing local artists, musicians, businesses
                 </h5>
               </div>
             </div>
@@ -60,7 +59,7 @@ class IndexPage extends React.Component {
               <div className="container">
                 <div className="pad-70">
                   <h2 className="portfolio-title text-center  section-title">
-                    Just A Few Of Many Awesome Local Businesses
+                    Just A Few Of Many Awesome Local Listings
                   </h2>
                   <div className="col-md-10 offset-md-1 ">
                     <div className="row">
@@ -72,7 +71,10 @@ class IndexPage extends React.Component {
                         )
                       })}
                       <div className="see-all-wrapper">
-                        <Link to="/business" className="see-all contact100-clear-btn">
+                        <Link
+                          to="/business"
+                          className="see-all contact100-clear-btn"
+                        >
                           <span />
                           See All
                         </Link>
@@ -80,18 +82,26 @@ class IndexPage extends React.Component {
                     </div>
                   </div>
                 </div>
-
                 <div className="pad-70">
                   <h2 className="portfolio-title text-center  section-title">
                     Help Spread The Word!
                   </h2>
                   <div className="col-md-10 offset-md-1 ">
+                    <p>
+                      We're all in this together. Please share this site with
+                      anyone you know.{" "}
+                      <b>Encourage local artists, musicians, and business owners to join</b> and tell us
+                      how we can support them.{" "}
+                      <b>Encourage your friends to browse </b> and find new
+                      things they'll love and new local things to support!
+                    </p>
                     <div className="row social-share-row">
                       <Share
                         socialConfig={{
                           config: {
                             url: "https://supportlocalakron.com",
-                            quote: "Don't distance yourself from Akron! Join me in continuing to support our local businesses. #SupportLocalAkron",
+                            quote:
+                              "Don't distance yourself from Akron! Join me in continuing to support our local artists, musicians, and businesses. #SupportLocalAkron",
                             hashtag: "SupportLocalAkron",
                             title: this.props.data.site.siteMetadata.title,
                           },
@@ -105,7 +115,12 @@ class IndexPage extends React.Component {
                     </div>
                   </div>
                 </div>
-                <p className="photo-credit">Header Photo Credit: <OutboundLink href="http://northsidemarketplace.com/">Northside Marketplace</OutboundLink></p>
+                <p className="photo-credit">
+                  Header Photo Credit:{" "}
+                  <OutboundLink href="http://northsidemarketplace.com/">
+                    Northside Marketplace
+                  </OutboundLink>
+                </p>
 
                 {/* <div className="pad-70">
                   <h2 className="portfolio-title text-center  section-title">

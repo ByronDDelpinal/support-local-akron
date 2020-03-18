@@ -97,7 +97,7 @@ function BusinessIndex(props) {
       <Layout>
         <div className="container">
           <div className="text-center pad-20">
-            <h2 className="section-title">Local Businesses</h2>
+            <h2 className="section-title">Local Listings</h2>
           </div>
           <div className="facets">
             {categories.map(category => (
