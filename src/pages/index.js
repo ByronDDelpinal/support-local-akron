@@ -48,7 +48,7 @@ class IndexPage extends React.Component {
                   <b>SUPPORT LOCAL AKRON</b>
                 </h1>
                 <h5 className="greetings">
-                  Show your love to our amazing local artists, musicians, businesses
+                  Show your love to our amazing local artists, musicians, and businesses
                 </h5>
               </div>
             </div>
