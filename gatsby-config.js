@@ -1,14 +1,14 @@
-var dotenv = require("dotenv");
-dotenv.config();
+var dotenv = require("dotenv")
+dotenv.config()
 
-const { spaceId, accessToken } = process.env;
+const { spaceId, accessToken } = process.env
 module.exports = {
   siteMetadata: {
     title: `Support Local Akron - Show Your Love ❤️`,
     description: `A place to find out how to help our local artists, musicians, and businesses.`,
     author: `Byron & Kirsten Delpinal`,
-    twitterHandle: '@ByronDelpinal / @CreativeEyeDesigns',
-    url:`https://supportlocalakron.com/`
+    twitterHandle: "@ByronDelpinal / @CreativeEyeDesigns",
+    url: `https://supportlocalakron.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -51,11 +51,10 @@ module.exports = {
 
     {
       resolve: `gatsby-source-contentful`,
-        options: {
-          spaceId,
-          accessToken
-        }
-
+      options: {
+        spaceId,
+        accessToken,
+      },
     },
 
     {
@@ -76,8 +75,6 @@ module.exports = {
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: true,
       },
-    }
+    },
   ],
-
-
 }

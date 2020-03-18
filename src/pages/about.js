@@ -1,9 +1,10 @@
-import React, { Component } from "react"
-import Helmet from "react-helmet"
-import Layout from "../components/layout"
 import { graphql } from "gatsby"
+import Helmet from "react-helmet"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import React, { Component } from "react"
+
 import aboutImg from "../images/about.jpg"
+import Layout from "../components/Layout"
 
 export class About extends Component {
   render() {

@@ -1,7 +1,6 @@
-import React, { useState } from "react"
-import Helmet from "react-helmet"
-import Layout from "../components/layout"
-import BusinessPreview from "./business-preview"
+import React from "react"
+
+import BusinessPreview from "./BusinessPreview"
 
 function BusinessPreviewList(props) {
   return (

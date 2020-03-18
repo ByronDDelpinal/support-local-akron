@@ -1,30 +1,20 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Helmet from "react-helmet"
-import Layout from "../components/layout"
+import Img from "gatsby-image"
+import React from "react"
+
+import BusinessPreview from "../components/BusinessPreview"
+import Layout from "../components/Layout"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import Share from "../components/Share"
 import shareImg from "../images/support-social-card.png"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-
-// import SEO from "../components/seo"
-import Img from "gatsby-image"
-import BusinessPreview from "../components/business-preview"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHeart, faComment } from "@fortawesome/free-solid-svg-icons"
 
 class IndexPage extends React.Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
     const businesses = this.props.data.allContentfulBusinesses.nodes
-    // const instaimg = this.props.data.allInstaNode.edges
     const coverphoto = this.props.data.coverImg
-    // const settings = {
-    //   dots: true,
-    //   infinite: true,
-    //   speed: 500,
-    //   slidesToShow: 1,
-    //   slidesToScroll: 1
-    // };
+
     return (
       <Layout>
         <Helmet title={siteTitle} />
@@ -48,7 +38,8 @@ class IndexPage extends React.Component {
                   <b>SUPPORT LOCAL AKRON</b>
                 </h1>
                 <h5 className="greetings">
-                  Show your love to our amazing local artists, musicians, and businesses
+                  Show your love to our amazing local artists, musicians, and
+                  businesses
                 </h5>
               </div>
             </div>
@@ -90,8 +81,11 @@ class IndexPage extends React.Component {
                     <p>
                       We're all in this together. Please share this site with
                       anyone you know.{" "}
-                      <b>Encourage local artists, musicians, and business owners to join</b> and tell us
-                      how we can support them.{" "}
+                      <b>
+                        Encourage local artists, musicians, and business owners
+                        to join
+                      </b>{" "}
+                      and tell us how we can support them.{" "}
                       <b>Encourage your friends to browse </b> and find new
                       things they'll love and new local things to support!
                     </p>
@@ -121,41 +115,6 @@ class IndexPage extends React.Component {
                     Northside Marketplace
                   </OutboundLink>
                 </p>
-
-                {/* <div className="pad-70">
-                  <h2 className="portfolio-title text-center  section-title">
-                    Instagram Feed
-                  </h2>
-                  <div className="col-md-10 offset-md-1 ">
-                    <ul className="row insta-blk">
-                      {instaimg.map(({ node }) => {
-                        return (
-                          <li key={node.id} className="insta-img-cnt">
-                            <Img fixed={node.localFile.childImageSharp.fixed} />
-                            <p className="insta-likes-comm">
-                              {" "}
-                              <span className="insta-like">
-                                {" "}
-                                <FontAwesomeIcon
-                                  icon={faHeart}
-                                  className="icon"
-                                />
-                                {node.likes}
-                              </span>{" "}
-                              <span className="insta-comment">
-                                <FontAwesomeIcon
-                                  className="icon"
-                                  icon={faComment}
-                                />
-                                {node.comments}
-                              </span>
-                            </p>
-                          </li>
-                        )
-                      })}
-                    </ul>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
@@ -209,25 +168,3 @@ export const query = graphql`
     }
   }
 `
-/* NAHHHH */
-// allInstaNode(limit: 8) {
-//   edges {
-//     node {
-//       id
-//       likes
-//       comments
-//       mediaType
-//       preview
-//       original
-//       timestamp
-//       caption
-//       localFile {
-//         childImageSharp {
-//           fixed(width: 200, height: 200) {
-//             ...GatsbyImageSharpFixed
-//           }
-//         }
-//       }
-//     }
-//   }
-// }

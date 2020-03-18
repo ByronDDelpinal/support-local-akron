@@ -1,5 +1,6 @@
-import React, { Component } from "react"
 import Link from "gatsby-link"
+import React, { Component } from "react"
+
 import logoImg from "../images/support-akron-logo.png"
 
 export class Header extends Component {
@@ -28,7 +29,6 @@ export class Header extends Component {
                 </ul>
               </nav>
             </div>
-
           </div>
         </div>
       </section>

@@ -1,11 +1,14 @@
 import React, { Component } from "react"
-import Helmet from "react-helmet"
-import Layout from "../components/layout"
 import { graphql } from "gatsby"
-import ContactImg from "../images/img-01.png"
+import Helmet from "react-helmet"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
+import ContactImg from "../images/img-01.png"
+import Layout from "../components/Layout"
 
+// The form on this page works because it's deployed to Netlify and they
+// do some magic around it that makes it work. If you're not deploying there,
+// you may need to handle the form submit on your own.
 export class Contact extends Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -36,15 +39,15 @@ export class Contact extends Component {
                       <div>
                         <h5>List Your Local Organization</h5>
                         <p>
-                          If you're a local artist, musician, or business, let us know! We're
-                          hoping to expand the site to allow folks to list
-                          themselves, but until then, this form will have to do.
-                          Please fill out the information below, we'll get your
-                          business added ASAP. No local business is too small,
-                          large, obscure, or unique to be listed here. Every
-                          thing and every one matters. If the form doesn't work,
-                          or you'd prefer to answer these questions via email,
-                          please do so with{" "}
+                          If you're a local artist, musician, or business, let
+                          us know! We're hoping to expand the site to allow
+                          folks to list themselves, but until then, this form
+                          will have to do. Please fill out the information
+                          below, we'll get your business added ASAP. No local
+                          business is too small, large, obscure, or unique to be
+                          listed here. Every thing and every one matters. If the
+                          form doesn't work, or you'd prefer to answer these
+                          questions via email, please do so with{" "}
                           <a href="mailto:kirsten@creativeeye.design?cc=byronddelpinal@gmail.com">
                             this link
                           </a>
@@ -75,7 +78,7 @@ export class Contact extends Component {
                       </div>
                       <div className="field half">
                         <label htmlFor="website">
-                        Organization Website (Include http://)
+                          Organization Website (Include http://)
                         </label>
                         <input
                           type="text"
@@ -89,8 +92,11 @@ export class Contact extends Component {
                       <div className="field half">
                         <label htmlFor="image">Organization Photo</label>
                         <p>
-                          Our image uploader broke 🙁. I'm working on it, I promise! For now,
-                          either{" "}
+                          Our image uploader broke{" "}
+                          <span aria-label="frowning face" role="img">
+                            🙁
+                          </span>
+                          . I'm working on it, I promise! For now, either{" "}
                           <a href="mailto:kirsten@creativeeye.design?cc=byronddelpinal@gmail.com">
                             email it
                           </a>{" "}
@@ -159,7 +165,9 @@ export class Contact extends Component {
                     </form>
                     <p className="photo-credit">
                       Background Photo Credit:{" "}
-                      <OutboundLink href="https://www.shanewynn.com/">Shane Wynn</OutboundLink>
+                      <OutboundLink href="https://www.shanewynn.com/">
+                        Shane Wynn
+                      </OutboundLink>
                     </p>
                   </div>
                 </div>

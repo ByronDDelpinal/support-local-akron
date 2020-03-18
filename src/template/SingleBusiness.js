@@ -1,56 +1,48 @@
-import React, { Component } from "react"
-import Layout from "../components/layout"
-// import Sidebar from "../components/sidebar"
-import Helmet from "react-helmet"
-import { graphql } from "gatsby"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-
-import Img from "gatsby-image"
-import Share from "../components/Share"
-import { INLINES } from '@contentful/rich-text-types';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { graphql } from "gatsby"
+import Helmet from "react-helmet"
+import Img from "gatsby-image"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+import React, { Component } from "react"
 
+import { INLINES } from "@contentful/rich-text-types"
+import Layout from "../components/Layout"
+// import Sidebar from "../components/sidebar"
 import websiteLogo from "../images/website-logo.png"
 
 class BusinessTemplate extends Component {
   render() {
-    const business = this.props.data.contentfulBusinesses;
-    const siteurl = this.props.data.site.siteMetadata.url;
-    const twitterhandle = this.props.data.site.siteMetadata.twitterHandle;
+    const business = this.props.data.contentfulBusinesses
 
+    // Creates a document from a Contenful Rich Text Field
     const businessStory = {
       nodeType: "document",
       data: {},
-      content: business.story ? business.story.json.content : []
+      content: business.story ? business.story.json.content : [],
     }
 
+    // Creates a document from a Contenful Rich Text Field
     const businessSupportFull = {
       nodeType: "document",
       data: {},
-      content: business.supportFull ? business.supportFull.json.content : []
+      content: business.supportFull ? business.supportFull.json.content : [],
     }
 
+    // Overrides the way we handle the inline hypertext item in a document. This
+    // adds outbound linking so we can track if traffic is actually going to
+    // the businesses signing up
     const businessSupportOptions = {
       renderNode: {
-        [INLINES.HYPERLINK]: (node, children) => <OutboundLink href={node.data.uri} rel="noopener noreferrer" target="_blank">{children}</OutboundLink>,
+        [INLINES.HYPERLINK]: (node, children) => (
+          <OutboundLink
+            href={node.data.uri}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {children}
+          </OutboundLink>
+        ),
       },
-    };
-
-    const socialConfigss = {
-      site: {
-        siteMetadata: { siteurl, twitterhandle },
-      },
-
-      title: business.name,
-      slug: business.urlName,
-    }
-
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
     }
 
     return (
@@ -67,24 +59,40 @@ class BusinessTemplate extends Component {
                   </div>
                   <p className="business-type website">
                     <img
-                        className="website-logo"
-                        src={websiteLogo}
-                        alt="image of laptop computer"
-                      />
-                    <OutboundLink className="business-website" href={business.website} target="_blank" rel="noopener noreferrer">Our Website</OutboundLink>
+                      className="website-logo"
+                      src={websiteLogo}
+                      alt="laptop computer"
+                    />
+                    <OutboundLink
+                      className="business-website"
+                      href={business.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Our Website
+                    </OutboundLink>
                   </p>
                 </div>
                 <div className="entry-media">
-                  <Img fluid={business.image.fluid} backgroundColor={"#f4f8fb"} />
+                  <Img
+                    fluid={business.image.fluid}
+                    backgroundColor={"#f4f8fb"}
+                  />
                 </div>
                 <div className="post-content">
                   <div className="business-content">
                     <h3>Our Story</h3>
-                    {documentToReactComponents(businessStory, businessSupportOptions)}
+                    {documentToReactComponents(
+                      businessStory,
+                      businessSupportOptions
+                    )}
                   </div>
                   <div className="business-content">
                     <h3>How To Support Us</h3>
-                    {documentToReactComponents(businessSupportFull, businessSupportOptions)}
+                    {documentToReactComponents(
+                      businessSupportFull,
+                      businessSupportOptions
+                    )}
                   </div>
                 </div>
               </div>
@@ -98,17 +106,6 @@ class BusinessTemplate extends Component {
                 </div>
               </div> */}
             </div>
-            {/* <Share socialConfig={{config: { socialConfigss, }, }} /> */}
-
-            {/* <Share
-              socialConfig={{
-                ...socialConfigss.site.siteMetadata.twitterhandletitle,
-                config: {
-                  url: `${siteurl}${socialConfigss.slug}`,
-                  title: `${socialConfigss.title}`,
-                },
-              }}
-            /> */}
           </div>
         </div>
       </Layout>
@@ -120,14 +117,7 @@ export default BusinessTemplate
 
 export const pageQuery = graphql`
   query businessQuery($urlName: String) {
-    site {
-      siteMetadata {
-        url
-        twitterHandle
-      }
-    }
-
-    contentfulBusinesses(urlName: {eq: $urlName}) {
+    contentfulBusinesses(urlName: { eq: $urlName }) {
       id
       image {
         file {

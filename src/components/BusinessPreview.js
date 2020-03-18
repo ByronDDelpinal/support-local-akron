@@ -1,25 +1,39 @@
-import React, { Component } from "react"
-import { Link } from "gatsby"
-import { INLINES } from '@contentful/rich-text-types';
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import Img from "gatsby-image"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import Img from "gatsby-image"
+import { INLINES } from "@contentful/rich-text-types"
+import { Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+import React from "react"
 
 function BusinessPreview(props) {
-  const MAX_LENGTH_Title = 80
+  const MAX_LENGTH_TITLE = 80
   const { business } = props
 
+  // Creates a document from a Contenful Rich Text Field
   const businessSupportSummary = {
     nodeType: "document",
     data: {},
-    content: business.supportSummary ? business.supportSummary.json.content : []
+    content: business.supportSummary
+      ? business.supportSummary.json.content
+      : [],
   }
 
+  // Overrides the way we handle the inline hypertext item in a document. This
+  // adds outbound linking so we can track if traffic is actually going to
+  // the businesses signing up
   const businessSupportSummaryOptions = {
     renderNode: {
-      [INLINES.HYPERLINK]: (node, children) => <OutboundLink href={node.data.uri} rel="noopener noreferrer" target="_blank">{children}</OutboundLink>,
+      [INLINES.HYPERLINK]: (node, children) => (
+        <OutboundLink
+          href={node.data.uri}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {children}
+        </OutboundLink>
+      ),
     },
-  };
+  }
 
   return (
     <article className="blog-listing" key={business.urlName}>
@@ -30,14 +44,17 @@ function BusinessPreview(props) {
         <h2 className="entry-title">
           <Link to={business.urlName}>
             {" "}
-            {business.name > MAX_LENGTH_Title
+            {business.name > MAX_LENGTH_TITLE
               ? business.name
-              : business.name.substring(0, MAX_LENGTH_Title)}{" "}
+              : business.name.substring(0, MAX_LENGTH_TITLE)}{" "}
           </Link>
         </h2>
         <p className="business-type">{business.type}</p>
         <div className="entry-content">
-          {documentToReactComponents(businessSupportSummary, businessSupportSummaryOptions)}
+          {documentToReactComponents(
+            businessSupportSummary,
+            businessSupportSummaryOptions
+          )}
         </div>
       </div>
 
