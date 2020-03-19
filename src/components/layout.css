@@ -576,10 +576,10 @@ a.entry-read-more:hover {
 }
 
 .inner-blog-post .gatsby-image-wrapper {
-  max-height: 500px;
   background-color: #fff;
+  box-shadow: none;
+  max-height: 500px;
   padding: 20px;
-  box-shadow: 2px 2px 2px #e3e3e3;
 }
 .inner-blog-post h2.section-headline {
   color: #35833f;

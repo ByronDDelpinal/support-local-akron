@@ -80,8 +80,9 @@ class BusinessTemplate extends Component {
               >
                 <div className="entry-media">
                   <Img
-                    fluid={business.image.fluid}
                     backgroundColor={'#f4f8fb'}
+                    fluid={business.image.fluid}
+                    objectFit="none"
                   />
                 </div>
                 <div className="post-content">
