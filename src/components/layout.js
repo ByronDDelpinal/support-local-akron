@@ -55,28 +55,32 @@ const Template = ({ children }) => (
                 'local business, shop local, akron, ohio, small business, entrepreneur',
             },
             {
-              name: 'og:title',
               property: 'og:title',
               content: data.site.siteMetadata.title,
             },
             {
-              name: 'og:description',
               property: 'og:description',
               content: data.site.siteMetadata.description,
             },
             {
-              name: 'og:image',
               property: 'og:image',
               content: `${url}${shareImg}`,
             },
             {
-              name: 'og:url',
               property: 'og:url',
               content: url,
             },
             {
+              property: 'og:type',
+              content: 'website',
+            },
+            {
               name: 'twitter:card',
               content: 'summary_large_image',
+            },
+            {
+              name: 'twitter:title',
+              content: data.site.siteMetadata.title,
             },
             {
               name: 'twitter:image',

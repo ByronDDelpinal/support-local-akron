@@ -11,7 +11,6 @@ If you think this will help your city then please clone, fork, download, or copy
 
 ## Known Issues
 You would be amazing if you submitted a PR to fix any of these!
-- The share to Twitter button on the homepage doesn't do anything when you click on it.
 - The photo uploader isn't working on the "Get Listed" form.
 - The sort does not persist when you filter from one category to the next. I'm not sure if this is really an "issue" as I accounted for it in the UI, but it still might be weird.
 - There are no tests.
