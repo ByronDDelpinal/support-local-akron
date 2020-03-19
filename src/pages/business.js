@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Helmet from 'react-helmet';
-import layout from '../components/layout';
-import BusinessPreviewList from '../components/BusinessPreviewList';
+import Layout from '../components/layout';
+import BusinessPreviewList from '../components/business-preview-list';
 import { graphql } from 'gatsby';
 
 function BusinessIndex(props) {

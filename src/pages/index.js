@@ -3,8 +3,8 @@ import Helmet from 'react-helmet';
 import Img from 'gatsby-image';
 import React from 'react';
 
-import BusinessPreview from '../components/BusinessPreview';
-import layout from '../components/layout';
+import BusinessPreview from '../components/business-preview';
+import Layout from '../components/layout';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import Share from '../components/Share';
 import shareImg from '../images/support-social-card.png';

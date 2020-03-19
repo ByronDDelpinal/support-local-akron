@@ -32,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allContentfulBusinesses.nodes.forEach(business => {
       createPage({
         path: business.urlName,
-        component: path.resolve(`./src/template/SingleBusiness.js`),
+        component: path.resolve(`./src/template/business-single.js`),
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.

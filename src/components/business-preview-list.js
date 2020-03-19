@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BusinessPreview from './BusinessPreview';
+import BusinessPreview from './business-preview';
 
 function BusinessPreviewList(props) {
   return (

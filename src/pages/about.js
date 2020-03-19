@@ -4,7 +4,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React, { Component } from 'react';
 
 import aboutImg from '../images/about.jpg';
-import layout from '../components/layout';
+import Layout from '../components/layout';
 
 export class About extends Component {
   render() {
