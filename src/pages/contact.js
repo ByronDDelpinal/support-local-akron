@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import ContactImg from '../images/img-01.png';
-import Layout from '../components/Layout';
+import layout from '../components/layout';
 
 // The form on this page works because it's deployed to Netlify and they
 // do some magic around it that makes it work. If you're not deploying there,

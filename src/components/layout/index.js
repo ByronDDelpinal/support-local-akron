@@ -6,12 +6,12 @@
  */
 
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../Header';
+import Footer from '../Footer';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-import './layout.css';
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import shareImg from '../images/support-social-card.png';
 

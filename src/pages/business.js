@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Helmet from 'react-helmet';
-import Layout from '../components/Layout';
+import layout from '../components/layout';
 import BusinessPreviewList from '../components/BusinessPreviewList';
 import { graphql } from 'gatsby';
 
