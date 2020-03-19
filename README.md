@@ -66,15 +66,15 @@ Lol
 
 ## Contentful
 
-You'll need to set the content model up in Contenful to ensure your GraphQL queries will work. Here's the current content model:
+You'll need to set the content model up in Contenful to ensure your GraphQL queries will work. Here's my current content model:
 
-Businesses
---Name (Short Text) | The name of the business or organization
---Url Name (Short Text) | The URL slug you want to use for the page (Must be unique)
---Category (Short Text) | The category that will auto populate the filters on the business index page
---Type (Short Text) | The type of business, this will go under the name on the site
---Website (Short Text) | The website that will be linked from the single business page
---Image (Media) | The image that will be used on the preview and single business page
---Story (Rich Text) | The story visible only on the single business page
---Support Summary (Rich Text) | The summary used on the business preview cards
---Support Full (Rich Text) | The full support visible only on the single business page
+Businesses<br/>
+--Name (Short Text) | The name of the business or organization<br/>
+--Url Name (Short Text) | The URL slug you want to use for the page (Must be unique)<br/>
+--Category (Short Text) | The category that will auto populate the filters on the business index page<br/>
+--Type (Short Text) | The type of business, this will go under the name on the site<br/>
+--Website (Short Text) | The website that will be linked from the single business page<br/>
+--Image (Media) | The image that will be used on the preview and single business page<br/>
+--Story (Rich Text) | The story visible only on the single business page<br/>
+--Support Summary (Rich Text) | The summary used on the business preview cards<br/>
+--Support Full (Rich Text) | The full support visible only on the single business page<br/>
