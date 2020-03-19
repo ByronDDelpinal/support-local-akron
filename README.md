@@ -12,17 +12,17 @@ If you think this will help your city then please clone, fork, download, or copy
 
 ## Supporting Technologies
 
-Built with GatsbyJS.
-CI/CD and hosting through Netlify.
-Monitoring through Google Analytics.
+- Built with GatsbyJS.
+- CI/CD and hosting through Netlify.
+- Monitoring through Google Analytics.
 
 ## Pre-Requisites
 
-NodeJS v12.11.1
-NPM v6.13+
-GatsbyCLI v1.1+
-Contentful Account
-Netlify Account
+- NodeJS v12.11.1
+- NPM v6.13+
+- GatsbyCLI v1.1+
+- [Contentful](https://www.contentful.com/) Account
+- [Netlify](https://www.netlify.com/) Account
 
 ## Local Development
 
@@ -35,7 +35,7 @@ accessToken
 spaceId
 ```
 
-These are the spaceID and accessToken from Contentful.
+These are the `spaceID` and `accessToken` from Contentful.
 
 The site also requires a Google Analytics `trackingId`. You can store that in the `gatsby-config.js` file or you can be smarter than me and put it into and environment variable like a good developer.
 
