@@ -5,7 +5,6 @@
 </h1>
 
 ## Background
-
 Sitting at home during the COVID-19 pandemic my wife Kirsten and I were trying to figure out how we could best support our city's local artists, musicians, and businesses. It occured to us that we weren't going to be able to answer that question ourselves, so we built this as a way to allow them to tell us, on their terms, how we can support them during this unconventional time.
 
 If you think this will help your city then please clone, fork, download, or copy+paste this codebase into your own repository and start your own #SupportLocal application. No permission required. We're all in this together.
@@ -18,14 +17,12 @@ You would be amazing if you submitted a PR to fix any of these!
 - There are no tests.
 
 ## Supporting Technologies
-
 - Built with [GatsbyJS](https://www.gatsbyjs.org/).
 - CMS is [Contentful](https://www.contentful.com/)
 - CI/CD and hosting through [Netlify](https://www.netlify.com/).
 - Monitoring through [Google Analytics](https://analytics.google.com/).
 
 ## Pre-Requisites
-
 - NodeJS v12.11.1
 - NPM v6.13+
 - GatsbyCLI v1.1+
@@ -36,7 +33,6 @@ You would be amazing if you submitted a PR to fix any of these!
 ## Local Development
 
 ### Configuration
-
 This site requires a `.env` file with the following properties:
 
 ```
@@ -51,7 +47,6 @@ The `trackingId` is from Google Analytics
 You'll also need to add these three environment variables in Netlify by going to Setting > Build & Deploy > Environment.
 
 ### Setup
-
 `npm i` - Install your dependencies<br/>
 Then Either<br/>
 `gatsby develop` - Build the assets in development mode and start a web server<br/>
@@ -60,7 +55,6 @@ Or (Hopefully before you commit!)<br/>
 `gatsby serve` - Serve the assets in production mode<br/>
 
 ### Running Tests Locally
-
 Lol
 
 ## Things To Note
@@ -73,7 +67,6 @@ Lol
 - Sometimes Netlify will think it's super smart and categorize form submissions as spam. It's never once caught spam for me, but it has caught valid entries that I needed to go and mark as valid before I got an email notification for them. This is done in the Netlify UI.
 
 ## Contentful
-
 You'll need to set the content model up in Contenful to ensure your GraphQL queries will work. Here's my current content model:
 
 Businesses (Main Object)<br/>
