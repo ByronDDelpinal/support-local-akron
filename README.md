@@ -15,24 +15,22 @@ You would be amazing if you submitted a PR to fix any of these!
 - The photo uploader isn't working on the "Get Listed" form.
 - The sort does not persist when you filter from one category to the next. I'm not sure if this is really an "issue" as I accounted for it in the UI, but it still might be weird.
 - There are no tests.
+### Things That Aren't Issues But Annoy Me
+- The CSS is a one-file disaster and doesn't use a pre-processor.
+- The React components are split between class-based and functional. They should all be functional to take advantage of hooks.
 
-## Supporting Technologies
-- Built with [GatsbyJS](https://www.gatsbyjs.org/).
+## Supporting Services/Technologies
+- Built with [GatsbyJS](https://www.gatsbyjs.org/) v2.19 (CLI v2.10)
+- Server-side functionality written in [NodeJS](https://nodejs.org/) v12.11.1
+- UI Components made with [ReactJS](https://reactjs.org/) v16.13
 - CMS is [Contentful](https://www.contentful.com/)
-- CI/CD and hosting through [Netlify](https://www.netlify.com/).
-- Monitoring through [Google Analytics](https://analytics.google.com/).
-
-## Pre-Requisites
-- NodeJS v12.11.1
-- NPM v6.13+
-- GatsbyCLI v1.1+
-- Contentful Account
-- Netlify Account
-- Google Analytics Account
+- Data requests made using [GraphQL](https://graphql.org/)
+- CI/CD and hosting through [Netlify](https://www.netlify.com/)
+- Monitoring through [Google Analytics](https://analytics.google.com/)
 
 ## Local Development
 
-### Configuration
+### Configuration Steps
 This site requires a `.env` file with the following properties:
 
 ```
@@ -57,6 +55,10 @@ Or (Hopefully before you commit!)<br/>
 ### Running Tests Locally
 Lol
 
+## Deploying With Netlify
+1. Follow [this guide](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) to connect Netlify and GitHub and deploy the site
+2. Enable Netlify forms through their UI
+
 ## Things To Note
 - Since Gatsby pre-runs all of your GraphQL queries when the site is built, you'll need to re-deploy when content changes are made in Contetful unless you follow [this guide](https://www.contentful.com/developers/docs/tutorials/general/automate-site-builds-with-webhooks/) on setting up a build hook that Contentful can kick off on publish.
 
@@ -68,7 +70,7 @@ Lol
 
 - Sometimes Netlify will think it's super smart and categorize form submissions as spam. It's never once caught spam for me, but it has caught valid entries that I needed to go and mark as valid before I got an email notification for them. This is done in the Netlify UI.
 
-## Contentful
+## Content Model
 You'll need to set the content model up in Contenful to ensure your GraphQL queries will work. Here's my current content model:
 
 Businesses (Main Object)<br/>
