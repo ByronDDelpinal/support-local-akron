@@ -38,20 +38,19 @@ spaceId
 trackingId
 ```
 
-The `spaceID` and `accessToken` are from Contentful.
+The `spaceID` and `accessToken` are from Contentful.<br/>
 The `trackingId` is from Google Analytics
 
 You'll also need to add these three environment variables in Netlify by going to Setting > Build & Deploy > Environment.
 
 ### Setup
 
-`npm i` will install your dependencies
-`gatsby develop` will build the assets in development mode and start a web server
-
-If you want to build the site in production mode you'll need to build the assets with
-`gatsby build`
-and then start the production web server with
-`gatsby serve`
+`npm i` - Install your dependencies<br/>
+Then Either<br/>
+`gatsby develop` - Build the assets in development mode and start a web server<br/>
+Or (Hopefully before you commit!)<br/>
+`gatsby build` - Build the assets in production mode<br/>
+`gatsby serve` - Serve the assets in production mode<br/>
 
 ### Running Tests Locally
 
