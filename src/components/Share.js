@@ -17,7 +17,7 @@ const Share = ({ socialConfig }) => {
     <div className="post-social">
       <FacebookShareButton
         url={socialConfig.config.url}
-        quote={socialConfig.config.quote}
+        quote={`${socialConfig.config.quote} #${socialConfig.config.hashtag}`}
         className="button is-outlined is-rounded facebook"
       >
         <span className="icon">
@@ -28,8 +28,8 @@ const Share = ({ socialConfig }) => {
       <TwitterShareButton
         url={socialConfig.config.url}
         className="button is-outlined is-rounded twitter"
-        title={socialConfig.config.title}
-        hashtags={socialConfig.config.hashtag}
+        title={socialConfig.config.quote}
+        hashtags={[socialConfig.config.hashtag]}
       >
         <span className="icon">
           <FontAwesomeIcon icon={faTwitter} />
@@ -39,7 +39,7 @@ const Share = ({ socialConfig }) => {
       <LinkedinShareButton
         url={socialConfig.config.url}
         className="button is-outlined is-rounded linkedin"
-        title={socialConfig.config.title}
+        title={`${socialConfig.config.quote} #${socialConfig.config.hashtag}`}
       >
         <span className="icon">
           <FontAwesomeIcon icon={faLinkedin} />

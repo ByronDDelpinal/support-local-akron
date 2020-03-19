@@ -1,7 +1,7 @@
 {
   "name": "support-local-akron",
   "description": "A way to support local Akron businesses during the coronovirus quarantine",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Byron Delpinal <byronddelpinal@gmail.com>",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",

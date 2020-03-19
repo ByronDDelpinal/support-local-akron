@@ -95,7 +95,7 @@ class IndexPage extends React.Component {
                           config: {
                             url: 'https://supportlocalakron.com',
                             quote:
-                              "Don't distance yourself from Akron! Join me in continuing to support our local artists, musicians, and businesses. #SupportLocalAkron",
+                              "Don't distance yourself from Akron! Join me in continuing to support our local artists, musicians, and businesses.",
                             hashtag: 'SupportLocalAkron',
                             title: this.props.data.site.siteMetadata.title,
                           },

@@ -72,8 +72,8 @@ const Template = ({ children }) => (
               content: data.site.siteMetadata.description,
             },
             {
-              name: 'twitter:image',
-              property: 'twitter:image',
+              name: 'twitter:card',
+              property: 'twitter:card',
               content: shareImg,
             },
           ]}
