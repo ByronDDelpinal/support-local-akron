@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import React from 'react';
 
 import BusinessPreview from '../components/BusinessPreview';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import Share from '../components/Share';
 import shareImg from '../images/support-social-card.png';
