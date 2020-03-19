@@ -35,11 +35,13 @@ This site requires a `.env` file with the following properties:
 ```
 accessToken
 spaceId
+trackingId
 ```
 
-These are the `spaceID` and `accessToken` from Contentful.
+The `spaceID` and `accessToken` are from Contentful.
+The `trackingId` is from Google Analytics
 
-The site also requires a Google Analytics `trackingId`. You can store that in the `gatsby-config.js` file or you can be smarter than me and put it into and environment variable like a good developer.
+You'll also need to add these three environment variables in Netlify by going to Setting > Build & Deploy > Environment.
 
 ### Setup
 

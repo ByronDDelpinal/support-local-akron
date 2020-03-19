@@ -1,7 +1,8 @@
 var dotenv = require("dotenv")
 dotenv.config()
 
-const { spaceId, accessToken } = process.env
+const { accessToken, spaceId, trackingId } = process.env
+
 module.exports = {
   siteMetadata: {
     title: `Support Local Akron - Show Your Love ❤️`,
@@ -53,9 +54,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-160723331-1",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        trackingId,
         head: true,
       },
     },
