@@ -1008,9 +1008,10 @@ h4.success-msg {
 /** Sidebar **/
 .sidebar-blk {
   background: #d1d3d4;
+  box-shadow: 2px 2px 2px #f0faff;
   padding: 20px;
   position: sticky;
-  box-shadow: 2px 2px 2px #f0faff;
+  top: 0;
 }
 
 .sidebar-blk h4 {
