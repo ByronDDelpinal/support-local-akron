@@ -1,14 +1,14 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/819c20ba-81db-4dae-83f4-a1dbe82eba5f/deploy-status)](https://app.netlify.com/sites/xenodochial-bohr-1c4dfd/deploys)
+
 <h1 align="center">
   Support Local Akron
 </h1>
 
 ## Background
 
-Sitting at home during the COVID-19 pandemic Kirsten and I were trying to figure out how we could best support our city's local artists, musicians, and businesses. It occured to us that we weren't going to be able to answer that question ourselves, so we built this as a way to allow them to tell us, on their terms, how we can support them.
+Sitting at home during the COVID-19 pandemic my wife Kirsten and I were trying to figure out how we could best support our city's local artists, musicians, and businesses. It occured to us that we weren't going to be able to answer that question ourselves, so we built this as a way to allow them to tell us, on their terms, how we can support them during this unconventional time.
 
-If you think this will help your city then please clone, fork, or copy+paste this codebase and start your own #SupportLocal movement. No permission required. We're all in this together.
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/819c20ba-81db-4dae-83f4-a1dbe82eba5f/deploy-status)](https://app.netlify.com/sites/xenodochial-bohr-1c4dfd/deploys)
+If you think this will help your city then please clone, fork, download, or copy+paste this codebase into your own repository and start your own #SupportLocal application. No permission required. We're all in this together.
 
 ## Supporting Technologies
 
