@@ -10,6 +10,13 @@ Sitting at home during the COVID-19 pandemic my wife Kirsten and I were trying t
 
 If you think this will help your city then please clone, fork, download, or copy+paste this codebase into your own repository and start your own #SupportLocal application. No permission required. We're all in this together.
 
+## Known Issues
+You would be amazing if you submitted a PR to fix any of these!
+- The share to Twitter button on the homepage doesn't do anything when you click on it.
+- The photo uploader isn't working on the "Get Listed" form.
+- The sort does not persist when you filter from one category to the next. I'm not sure if this is really an "issue" as I accounted for it in the UI, but it still might be weird.
+- There are no tests.
+
 ## Supporting Technologies
 
 - Built with [GatsbyJS](https://www.gatsbyjs.org/).
@@ -69,7 +76,7 @@ Lol
 
 You'll need to set the content model up in Contenful to ensure your GraphQL queries will work. Here's my current content model:
 
-Businesses<br/>
+Businesses (Main Object)<br/>
 --Name (Short Text) | The name of the business or organization<br/>
 --Url Name (Short Text) | The URL slug you want to use for the page (Must be unique)<br/>
 --Category (Short Text) | The category that will auto populate the filters on the business index page<br/>
