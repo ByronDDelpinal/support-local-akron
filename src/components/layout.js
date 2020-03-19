@@ -15,6 +15,19 @@ import './layout.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import shareImg from '../images/support-social-card.png';
 
+// Seemed like the best way to check for and remove a trailing slash after midnight 🤷🏼‍♂️
+const getUrl = () => {
+  const fullHref = typeof window !== 'undefined' ? window.location.href : '';
+  const trimmedHref =
+    (fullHref[fullHref.length - 1] === '/')
+      ? fullHref.substring(0, fullHref.length - 1)
+      : fullHref;
+
+  return trimmedHref;
+};
+
+const url = getUrl();
+
 const Template = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -54,22 +67,20 @@ const Template = ({ children }) => (
             {
               name: 'og:image',
               property: 'og:image',
-              content: shareImg,
+              content: `${url}${shareImg}`,
             },
             {
               name: 'og:url',
               property: 'og:url',
-              content: 'https://supportlocalakron.com',
+              content: url,
             },
             {
               name: 'twitter:card',
-              property: 'twitter:card',
               content: 'summary_large_image',
             },
             {
               name: 'twitter:image',
-              property: 'twitter:image',
-              content: shareImg,
+              content: `${url}${shareImg}`,
             },
           ]}
         >
