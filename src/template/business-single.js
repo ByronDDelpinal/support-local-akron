@@ -47,7 +47,7 @@ class BusinessTemplate extends Component {
 
     return (
       <Layout>
-        <Helmet title={`${business.name}`} />
+        <Helmet title={`Support ${business.name}`} />
         <div className="inner-blog-post pad-40">
           <div className="container">
             <div className="row">

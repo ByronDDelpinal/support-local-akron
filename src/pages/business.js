@@ -115,7 +115,7 @@ function BusinessIndex(props) {
     setBusinesses(sortedBusinesses);
   };
 
-  const siteTitle = props.data.site.siteMetadata.title;
+  const siteTitle = `${props.data.site.siteMetadata.title} | Businesses`;
   const [businesses, setBusinesses] = useState(
     props.data.allContentfulBusinesses.nodes
   );
