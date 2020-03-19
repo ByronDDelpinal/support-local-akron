@@ -146,6 +146,7 @@ export default BusinessTemplate;
 export const pageQuery = graphql`
   query businessQuery($category: String, $urlName: String) {
     contentfulBusinesses(urlName: { eq: $urlName }) {
+      category
       id
       image {
         file {
