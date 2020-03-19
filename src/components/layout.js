@@ -62,16 +62,6 @@ const Template = ({ children }) => (
               content: 'https://supportlocalakron.com',
             },
             {
-              name: 'twitter:title',
-              property: 'twitter:title',
-              content: data.site.siteMetadata.title,
-            },
-            {
-              name: 'twitter:description',
-              property: 'twitter:description',
-              content: data.site.siteMetadata.description,
-            },
-            {
               name: 'twitter:card',
               property: 'twitter:card',
               content: shareImg,
