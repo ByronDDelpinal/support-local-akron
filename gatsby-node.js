@@ -7,6 +7,7 @@ exports.createPages = ({ graphql, actions }) => {
     {
       allContentfulBusinesses {
         nodes {
+          category
           urlName
         }
       }
@@ -17,6 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
         path: business.urlName,
         component: path.resolve(`./src/template/business-single.js`),
         context: {
+          category: business.category,
           urlName: business.urlName
           // Data passed to context is available
           // in page queries as GraphQL variables.

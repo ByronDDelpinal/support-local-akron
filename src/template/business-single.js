@@ -2,17 +2,19 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import Img from 'gatsby-image';
+import Link from 'gatsby-link';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React, { Component } from 'react';
 
 import { INLINES } from '@contentful/rich-text-types';
 import Layout from '../components/layout';
-// import Sidebar from "../components/sidebar"
 import websiteLogo from '../images/website-logo.png';
 
 class BusinessTemplate extends Component {
   render() {
     const business = this.props.data.contentfulBusinesses;
+    const relatedBusinesses = this.props.data.allContentfulBusinesses.nodes;
+    const anyRelatedBusinesses = relatedBusinesses.length > 0;
 
     // Creates a document from a Contenful Rich Text Field
     const businessStory = {
@@ -51,28 +53,31 @@ class BusinessTemplate extends Component {
         <div className="inner-blog-post pad-40">
           <div className="container">
             <div className="row">
-              <div className="col-lg-12 col-md-12">
-                <div className="post-content top-content">
-                  <div class="post-left-content">
-                    <h2 className="section-headline"> {business.name} </h2>
-                    <p className="business-type">{business.type}</p>
-                  </div>
-                  <p className="business-type website">
-                    <img
-                      className="website-logo"
-                      src={websiteLogo}
-                      alt="laptop computer"
-                    />
-                    <OutboundLink
-                      className="business-website"
-                      href={business.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Our Website
-                    </OutboundLink>
-                  </p>
+              <div className="post-content top-content">
+                <div class="post-left-content">
+                  <h2 className="section-headline"> {business.name} </h2>
+                  <p className="business-type">{business.type}</p>
                 </div>
+                <p className="business-type website">
+                  <img
+                    className="website-logo"
+                    src={websiteLogo}
+                    alt="laptop computer"
+                  />
+                  <OutboundLink
+                    className="business-website"
+                    href={business.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Our Website
+                  </OutboundLink>
+                </p>
+              </div>
+              {/* if we have related businesses, make room for the sidebar */}
+              <div
+                className={`${anyRelatedBusinesses ? 'col-md-8' : 'col-md-12'}`}
+              >
                 <div className="entry-media">
                   <Img
                     fluid={business.image.fluid}
@@ -97,14 +102,37 @@ class BusinessTemplate extends Component {
                 </div>
               </div>
               {/* Sidebar Stuff Goes Here, need to change back to col-lg-7 col-md-7 */}
-              {/* <div className="col-md-4 offset-md-1 ">
-                <div className="sidebar-blk">
-                  <ul className="">
-                    <li>TESTING MORE</li>
-                    <li>TESTING MORE</li>
-                  </ul>
+              {anyRelatedBusinesses ? (
+                <div className="col-md-4">
+                  <div className="sidebar-blk">
+                    <h4>Related Listings</h4>
+                    <p>
+                      While you're here, be sure to check out these other{' '}
+                      <span className="category">{business.category}</span>{' '}
+                      listings!
+                    </p>
+                    <ul className="related-business-list">
+                      {relatedBusinesses.map(relatedBusiness => (
+                        <li key={relatedBusiness.id}>
+                          <Link to={relatedBusiness.urlName}>
+                            <Img
+                              className="related-image"
+                              fluid={relatedBusiness.image.fluid}
+                              objectFit="cover"
+                            />
+                          </Link>
+                          <div class="related-information">
+                            <Link to={relatedBusiness.urlName}>
+                              <span>{relatedBusiness.name}</span>
+                            </Link>
+                            {/*<span class="meta">{relatedBusiness.type}</span>*/}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div> */}
+              ) : null}
             </div>
           </div>
         </div>
@@ -116,7 +144,7 @@ class BusinessTemplate extends Component {
 export default BusinessTemplate;
 
 export const pageQuery = graphql`
-  query businessQuery($urlName: String) {
+  query businessQuery($category: String, $urlName: String) {
     contentfulBusinesses(urlName: { eq: $urlName }) {
       id
       image {
@@ -144,7 +172,10 @@ export const pageQuery = graphql`
       website
     }
 
-    allContentfulBusinesses(limit: 5) {
+    allContentfulBusinesses(
+      filter: { category: { eq: $category }, urlName: { ne: $urlName } }
+      limit: 5
+    ) {
       nodes {
         image {
           file {
@@ -160,9 +191,7 @@ export const pageQuery = graphql`
           }
         }
         name
-        type
         urlName
-        website
       }
     }
   }

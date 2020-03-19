@@ -39,7 +39,9 @@ function BusinessPreview(props) {
     <article className="blog-listing" key={business.urlName}>
       <div className="entry-meta-content">
         <div className="entry-media">
-          <Img fluid={business.image.fluid} backgroundColor={'#f4f8fb'} />
+          <Link to={business.urlName}>
+            <Img fluid={business.image.fluid} backgroundColor={'#f4f8fb'} />
+          </Link>
         </div>
         <h2 className="entry-title">
           <Link to={business.urlName}>
