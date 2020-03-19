@@ -53,6 +53,15 @@ and then start the production web server with
 
 Lol
 
+## Things To Note
+- Since Gatsby pre-runs all of your GraphQL queries when the site is built, you'll need to re-deploy when content changes are made in Contetful unless you follow [this guide](https://www.contentful.com/developers/docs/tutorials/general/automate-site-builds-with-webhooks/) on setting up a build hook that Contentful can kick off on publish.
+
+- When you update your Node version (and maybe other times?) you'll need to use the "Clear Cache And Deploy" in Netlify instead of the regular deploy trigger.
+
+- The form only works because I'm using Netlify forms. You can learn how to set them up [here](https://docs.netlify.com/forms/setup/). If you go a different route, you'll need to actually handle the form submit.
+
+- Sometimes Netlify will think it's super smart and categorize form submissions as spam. It's never once caught spam for me, but it has caught valid entries that I needed to go and mark as valid before I got an email notification for them. This is done in the Netlify UI.
+
 ## Contentful
 
 You'll need to set the content model up in Contenful to ensure your GraphQL queries will work. Here's the current content model:
