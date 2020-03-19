@@ -60,6 +60,8 @@ Lol
 ## Things To Note
 - Since Gatsby pre-runs all of your GraphQL queries when the site is built, you'll need to re-deploy when content changes are made in Contetful unless you follow [this guide](https://www.contentful.com/developers/docs/tutorials/general/automate-site-builds-with-webhooks/) on setting up a build hook that Contentful can kick off on publish.
 
+- Static pages for each business in Contentful are built in the `gatsby-node.js` file using the `./template/business-single.js` file as a template and using the `urlName` property from Contentful as the URL slug.
+
 - When you update your Node version (and maybe other times?) you'll need to use the "Clear Cache And Deploy" in Netlify instead of the regular deploy trigger.
 
 - The form only works because I'm using Netlify forms. You can learn how to set them up [here](https://docs.netlify.com/forms/setup/). If you go a different route, you'll need to actually handle the form submit.
