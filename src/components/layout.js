@@ -64,7 +64,7 @@ const Template = ({ children }) => (
             {
               name: 'twitter:card',
               property: 'twitter:card',
-              content: shareImg,
+              content: summary_large_image,
             },
           ]}
         >
