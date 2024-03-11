@@ -66,7 +66,6 @@ img {
 
 .header-wrapper {
   padding: 13px 0;
-  /* margin-bottom: 50px; */
 }
 
 section {
@@ -602,7 +601,7 @@ a.entry-read-more:hover {
 }
 
 .contactImage {
-  background-image: url("../images/contact-bg.jpg");
+  background-image: url("/images/contact-bg.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
