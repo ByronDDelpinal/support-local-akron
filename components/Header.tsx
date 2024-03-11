@@ -9,7 +9,11 @@ export default function Header() {
         <div className="row">
           <div className="col-lg-3 col-md-12 text-left">
             <Link href="/" className="brand-logo">
-              <Image src={logoImg} alt="brand logo" height={52.23} />
+              <Image
+                src={logoImg}
+                alt="brand logo"
+                style={{ height: 'auto' }}
+              />
             </Link>
           </div>
           <div className="col-lg-9 col-md-12 text-right">

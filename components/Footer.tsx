@@ -9,7 +9,11 @@ export default function Footer() {
         <div className="row">
           <div className="col-lg-12 col-md-12 widget text-center">
             <Link href="/" className="brand-logo">
-              <Image src={logoImg} alt="brand logo" height={40.91} />
+              <Image
+                src={logoImg}
+                alt="brand logo"
+                style={{ height: 'auto' }}
+              />
             </Link>
             <p className="copyright">
               <a href="mailto:kirsten@creativeeye.design">
