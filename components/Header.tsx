@@ -6,8 +6,8 @@ export default function Header() {
   return (
     <section className="header-wrapper">
       <div className="container">
-        <div className="row">
-          <div className="col-lg-3 col-md-12 text-left">
+        <div className="flex gap-[90px]">
+          <div className="w-full lg:w-1/4">
             <Link href="/" className="brand-logo">
               <Image
                 src={logoImg}
@@ -16,7 +16,7 @@ export default function Header() {
               />
             </Link>
           </div>
-          <div className="col-lg-9 col-md-12 text-right">
+          <div className="w-full lg:w-3/4">
             <nav id="main-menu" className="text-right">
               <ul>
                 <li>
