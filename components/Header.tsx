@@ -23,7 +23,7 @@ export default function Header() {
                   <Link href="/about/">Purpose</Link>
                 </li>
                 <li>
-                  <Link href="/business/">Local Listings</Link>
+                  <Link href="/businesses/">Local Listings</Link>
                 </li>
                 <li>
                   <Link href="/contact/">Get Listed</Link>

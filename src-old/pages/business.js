@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Helmet from 'react-helmet';
-import Layout from '../components/layout';
 import BusinessPreviewList from '../components/business-preview-list';
 import { graphql } from 'gatsby';
 
@@ -115,7 +113,6 @@ function BusinessIndex(props) {
     setBusinesses(sortedBusinesses);
   };
 
-  const siteTitle = `${props.data.site.siteMetadata.title} | Businesses`;
   const [businesses, setBusinesses] = useState(
     props.data.allContentfulBusinesses.nodes
   );
@@ -123,34 +120,31 @@ function BusinessIndex(props) {
 
   return (
     <div class="business-index-page">
-      <Helmet title={siteTitle} />
-      <Layout>
-        <div className="container">
-          <div className="text-center pad-20">
-  <h2 className="section-title">{businesses.length} Local Listings</h2>
-          </div>
-          <div className="facets">
-            {categories.map(category => (
-              <button
-                className={`facet${category.selected ? ' selected' : ''}`}
-                onClick={() => filterBusinesses(category.name)}
-              >
-                {category.name}
-              </button>
-            ))}
-            <select
-              className="facet"
-              id="sort-by"
-              onChange={event => sortBusinesses(event.target.value)}
-            >
-              <option value="">Sort By ▼</option>
-              <option value="asc">Sort: A-Z</option>
-              <option value="desc">Sort: Z-A</option>
-            </select>
-          </div>
-          <BusinessPreviewList businesses={businesses} />
+      <div className="container">
+        <div className="text-center pad-20">
+          <h2 className="section-title">{businesses.length} Local Listings</h2>
         </div>
-      </Layout>
+        <div className="facets">
+          {categories.map(category => (
+            <button
+              className={`facet${category.selected ? ' selected' : ''}`}
+              onClick={() => filterBusinesses(category.name)}
+            >
+              {category.name}
+            </button>
+          ))}
+          <select
+            className="facet"
+            id="sort-by"
+            onChange={event => sortBusinesses(event.target.value)}
+          >
+            <option value="">Sort By ▼</option>
+            <option value="asc">Sort: A-Z</option>
+            <option value="desc">Sort: Z-A</option>
+          </select>
+        </div>
+        <BusinessPreviewList businesses={businesses} />
+      </div>
     </div>
   );
 }

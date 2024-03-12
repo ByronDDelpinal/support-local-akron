@@ -1,0 +1,16 @@
+{
+  "businesses": [
+    {
+      "category": "Service",
+      "id": "c63f8189-b4b9-504f-9475-94a02b6d9767",
+      "name": "Studio One 23",
+      "image": "/images/contact-bg.jpg",
+      "supportSummary": "Share our videos on our YouTube, tell people about our work, and support in any way they can.",
+      "supportFull": "Our company has lost 100% of our business since we thrive off of person to person contact and community events. Share our videos on our YouTube, tell people about our work, and support in any way they can.",
+      "type": "Videography and Editing Production",
+      "urlName": "studio-one23",
+      "website": "https://www.youtube.com/channel/UCzc9j3vJ5qbfK5ErcjkIhNg",
+      "story": "Studio One 23 was established in 2016 to produce video stories for the community, businesses and non profits. We have mastered how to tell your story through video and editing production. We are living our dream out loud.\n"
+    }
+  ]
+}

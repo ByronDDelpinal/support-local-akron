@@ -407,8 +407,8 @@ article.blog-listing .entry-meta-content a {
   color: var(--color-green);
 }
 
-article.blog-listing .gatsby-image-wrapper {
-  max-height: 200px !important;
+article.blog-listing img {
+  max-height: 200px;
 }
 
 article.blog-listing .entry-content-bottom {
