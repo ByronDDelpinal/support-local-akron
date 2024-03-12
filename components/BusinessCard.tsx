@@ -8,7 +8,7 @@ export function BusinessCard({ business }: any) {
     <article className="blog-listing" key={business.slug}>
       <div className="entry-meta-content">
         <div className="entry-media">
-          <Link href={business.slug}>
+          <Link href={`/businesses/${business.slug}`}>
             <Image
               src={business.image}
               alt={`${business.name} logo`}
@@ -18,7 +18,7 @@ export function BusinessCard({ business }: any) {
           </Link>
         </div>
         <h2 className="entry-title">
-          <Link href={business.slug}>
+          <Link href={`/businesses/${business.slug}`}>
             {' '}
             {business.name > MAX_LENGTH_TITLE
               ? business.name
@@ -30,7 +30,7 @@ export function BusinessCard({ business }: any) {
       </div>
 
       <div className="entry-content-bottom">
-        <Link href={business.slug} className="entry-read-more">
+        <Link href={`/businesses/${business.slug}`} className="entry-read-more">
           <span />
           Support
         </Link>
