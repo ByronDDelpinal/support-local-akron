@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+'use client';
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -12,13 +11,24 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Share = ({ socialConfig }) => {
+interface ShareProps {
+  socialConfig: {
+    config: {
+      url: string;
+      title: string;
+      quote: string;
+      hashtag?: string;
+    };
+  };
+}
+
+export function Share({ socialConfig }: ShareProps) {
   return (
     <div className="post-social">
       <FacebookShareButton
         url={socialConfig.config.url}
         quote={`${socialConfig.config.quote} #${socialConfig.config.hashtag}`}
-        className="button is-outlined is-rounded facebook"
+        className="button facebook"
       >
         <span className="icon">
           <FontAwesomeIcon icon={faFacebookF} />
@@ -27,9 +37,9 @@ const Share = ({ socialConfig }) => {
       </FacebookShareButton>
       <TwitterShareButton
         url={socialConfig.config.url}
-        className="button is-outlined is-rounded twitter"
+        className="button twitter"
         title={socialConfig.config.quote}
-        hashtags={[socialConfig.config.hashtag]}
+        // hashtags={[socialConfig.config.hashtag]}
       >
         <span className="icon">
           <FontAwesomeIcon icon={faTwitter} />
@@ -38,7 +48,7 @@ const Share = ({ socialConfig }) => {
       </TwitterShareButton>
       <LinkedinShareButton
         url={socialConfig.config.url}
-        className="button is-outlined is-rounded linkedin"
+        className="button linkedin"
         title={`${socialConfig.config.quote} #${socialConfig.config.hashtag}`}
       >
         <span className="icon">
@@ -48,18 +58,4 @@ const Share = ({ socialConfig }) => {
       </LinkedinShareButton>
     </div>
   );
-};
-
-Share.propTypes = {
-  socialConfig: PropTypes.shape({
-    config: PropTypes.shape({
-      url: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      quote: PropTypes.string.isRequired,
-      hashtag: PropTypes.string,
-    }),
-  }).isRequired,
-};
-Share.defaultProps = {};
-
-export default Share;
+}
