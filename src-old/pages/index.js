@@ -1,6 +1,4 @@
 import { graphql, Link } from 'gatsby';
-import Helmet from 'react-helmet';
-import Img from 'gatsby-image';
 import React from 'react';
 
 import BusinessPreview from '../../components/business-preview';
@@ -11,39 +9,11 @@ import shareImg from '../images/support-social-card.png';
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title;
     const businesses = this.props.data.allContentfulBusinesses.nodes;
-    const coverphoto = this.props.data.coverImg;
 
     return (
       <Layout>
-        <Helmet title={siteTitle} />
         <div className="herosection">
-          <div id="#top" className="cover animated">
-            <Img
-              title="Cover image"
-              alt="Air Balloon in Nature"
-              fluid={coverphoto.childImageSharp.fluid}
-              style={{
-                position: 'relative',
-                left: 0,
-                top: 0,
-                width: '100%',
-                height: '100%',
-              }}
-            />
-            <div className="overlay">
-              <div className="center">
-                <h1 className="name">
-                  <b>SUPPORT LOCAL AKRON</b>
-                </h1>
-                <h5 className="greetings">
-                  Show your love to our amazing local artists, musicians, and
-                  businesses
-                </h5>
-              </div>
-            </div>
-          </div>
 
           <div className="indexpage">
             <div className="right-section blog-post pad-70">
