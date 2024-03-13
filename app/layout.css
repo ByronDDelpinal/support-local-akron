@@ -461,12 +461,6 @@ a.entry-read-more:hover {
   }
 }
 
-.inner-blog-post .gatsby-image-wrapper {
-  background-color: #fff;
-  box-shadow: none;
-  max-height: 500px;
-  padding: 20px;
-}
 .inner-blog-post h2.section-headline {
   color: var(--color-green);
   font-size: 30px;

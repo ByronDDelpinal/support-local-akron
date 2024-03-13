@@ -87,10 +87,13 @@ export default function BusinessDetail({
           </div>
           <div className="col-md-12">
             <div className="entry-media">
-              {/* <Image
-                src={business.image.fluid}
-                objectFit="none"
-              /> */}
+              <Image
+                src={business.image}
+                alt="business logo"
+                width={730}
+                height={500}
+                style={{ maxHeight: '500px' }}
+              />
             </div>
             <div className="post-content">
               <div className="business-content">
