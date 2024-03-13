@@ -2,6 +2,7 @@ interface TextFieldProps {
   label: string;
   id: string;
   required: boolean;
+  limit?: number;
   type?: string;
 }
 
@@ -9,6 +10,7 @@ export function TextField({
   label,
   id,
   required,
+  limit,
   type = 'text',
 }: TextFieldProps) {
   return (
@@ -23,6 +25,7 @@ export function TextField({
           id={id}
           className="input100"
           required={required}
+          maxLength={limit}
         />
       )}
       <span className="focus-input100" />

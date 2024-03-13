@@ -39,21 +39,18 @@ export function ContactForm({ formAction, pending }: ContactFormProps) {
             <TextField
               label="Organization Website (Include http://)"
               id="website"
+              type="url"
               required
             />
             <div className="field half">
               <label htmlFor="image">Organization Photo</label>
-              <p>
-                Our image uploader broke{' '}
-                <span aria-label="frowning face" role="img">
-                  🙁
-                </span>
-                . I'm working on it, I promise! For now, either{' '}
-                <a href="mailto:kirsten@creativeeye.design?cc=byronddelpinal@gmail.com">
-                  email it
-                </a>{' '}
-                to us or we'll take our best guess at it.
-              </p>
+              <input
+                type="file"
+                name="image"
+                id="image"
+                className="input100"
+                required
+              />
               <span className="focus-input100"></span>
             </div>
             <TextField
@@ -72,6 +69,7 @@ export function ContactForm({ formAction, pending }: ContactFormProps) {
                 'How Can The Community Support You During This Time (140 Characters)?'
               }
               id="supportSummary"
+              limit={140}
               required
             />
             <TextField
