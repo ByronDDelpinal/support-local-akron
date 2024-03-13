@@ -88,22 +88,14 @@ export default function Contact() {
                     type="textarea"
                     required
                   />
-                  <ul className="actions">
-                    <li>
-                      <input
-                        type="submit"
-                        value="Send"
-                        className="contact100-form-btn special"
-                      />
-                    </li>
-                    <li>
-                      <input
-                        type="reset"
-                        value="Clear"
-                        className="contact100-clear-btn"
-                      />
-                    </li>
-                  </ul>
+                  <div className="actions">
+                    <input
+                      type="submit"
+                      value="Send"
+                      className="contact100-form-btn special"
+                    />
+                    <input type="reset" value="Clear" className="btn-outline" />
+                  </div>
                 </form>
                 <p className="photo-credit">
                   Background Photo Credit:{' '}

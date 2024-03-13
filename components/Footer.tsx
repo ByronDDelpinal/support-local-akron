@@ -4,10 +4,10 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <section className="footer-wrapper pad-20 bg-lightblue style-2">
+    <section className="footer-wrapper pad-20">
       <div className="container">
         <div className="row">
-          <div className="col-lg-12 col-md-12 widget text-center">
+          <div className="col-lg-12 col-md-12 text-center">
             <Link href="/" className="brand-logo">
               <Image
                 src={logoImg}

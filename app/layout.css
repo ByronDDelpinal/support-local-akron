@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -41,29 +41,26 @@ img {
   max-width: 1180px;
   margin: 0 auto;
 }
+
 #main-menu ul {
   margin: 20px 0px 10px;
   padding: 0;
-}
 
-#main-menu ul li {
-  padding: 0 18px;
-  display: inline-block;
-  position: relative;
-}
+  li {
+    padding: 0 18px;
+    display: inline-block;
+    position: relative;
 
-#main-menu ul li a {
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #000;
-  line-height: 42px;
-  letter-spacing: 0.7px;
-  text-decoration: none;
-}
-
-#main-menu ul li:last-child:after {
-  display: none;
+    a {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #000;
+      line-height: 42px;
+      letter-spacing: 0.7px;
+      text-decoration: none;
+    }
+  }
 }
 
 .brand-logo {
@@ -81,7 +78,7 @@ section {
 }
 
 .header-wrapper:after {
-  content: "";
+  content: '';
   width: 100%;
   height: 2px;
   bottom: 0px;
@@ -134,19 +131,21 @@ section {
   );
 }
 
-.about-us h4 {
-  font-size: 30px;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-}
+.about-us {
+  h4 {
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 
-.about-us ul {
-  padding-left: 18px;
-}
+  ul {
+    padding-left: 18px;
+  }
 
-.about-us li {
-  list-style-type: square;
+  li {
+    list-style-type: square;
+  }
 }
 
 .cover {
@@ -161,16 +160,12 @@ section {
 }
 
 .indexpage .see-all {
-  display: block;
-  line-height: 50px;
-  margin: 0 auto;
-  text-align: center;
-  text-transform: uppercase;
+  @apply mx-auto block uppercase;
   width: 20vw;
-}
 
-.indexpage .see-all:hover {
-  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -187,21 +182,21 @@ section {
   animation-fill-mode: both;
 }
 
-.footer-wrapper{
+.footer-wrapper {
   background-color: #d1d3d4;
-}
 
-.footer-wrapper .copyright {
-  margin-top: 10px;
-}
+  .copyright {
+    margin-top: 10px;
+  }
 
-.footer-wrapper a {
-  color: var(--color-green);
-  margin-top: 10px;
-}
+  a {
+    color: var(--color-green);
+    margin-top: 10px;
+  }
 
-.footer-wrapper img {
-  max-width: 200px;
+  img {
+    max-width: 200px;
+  }
 }
 
 .center {
@@ -216,13 +211,13 @@ section {
 }
 
 .name {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 36px;
   font-weight: 900;
 }
 
 .greetings {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 40px;
   font-weight: lighter;
   margin: 10px 0px;
@@ -275,7 +270,7 @@ section {
 @media only screen and (min-width: 550px) {
   .cover .name {
     font-size: 46px;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
   }
 
   .projects .subheader {
@@ -347,14 +342,14 @@ h2.section-title {
   font-size: 36px;
   margin-top: 0;
   margin-bottom: 25px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 h2.section-title:after {
   display: block;
-  content: " ";
+  content: ' ';
   background: var(--color-green);
   height: 2px;
   width: 50px;
@@ -369,7 +364,7 @@ article.blog-listing h2.entry-title {
 article.blog-listing h2.entry-title a {
   font-size: 20px;
   color: var(--color-green);
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   text-decoration: none;
 }
 article.blog-listing h2.entry-title {
@@ -418,7 +413,7 @@ article.blog-listing .entry-content-bottom {
 a.entry-read-more {
   text-align: right;
   display: inline-block;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
   width: 100%;
   color: var(--color-green);
@@ -433,7 +428,7 @@ a.entry-read-more:hover {
 
 .inner-blog-post .section-headline {
   font-size: 30px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
   margin-bottom: 0 !important;
   text-transform: uppercase;
@@ -459,10 +454,11 @@ a.entry-read-more:hover {
   font-style: italic;
   text-align: right;
   width: 100%;
-}
 
-.photo-credit a {
-  color: var(--color-green);
+  a,
+  a:hover {
+    color: var(--color-green);
+  }
 }
 
 .inner-blog-post .gatsby-image-wrapper {
@@ -486,13 +482,13 @@ a.entry-read-more:hover {
 }
 
 .inner-blog-post .business-content h3 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .contactImage {
-  background-image: url("/images/contact-bg.jpg");
+  background-image: url('/images/contact-bg.jpg');
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -510,10 +506,6 @@ a.entry-read-more:hover {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -529,12 +521,67 @@ a.entry-read-more:hover {
   transform: perspective(300px) rotateX(0deg) rotateY(0deg);
   transition: 0.4s ease-out;
   vertical-align: top;
+
+  &:hover {
+    transform: perspective(300px) rotateX(-1.58deg) rotateY(-4.46deg)
+      scale3d(1.1, 1.1, 1.1);
+  }
 }
 
 .contact-form {
   width: calc(100% - 10rem);
   display: inline-block;
   padding-left: 15%;
+
+  h5 {
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .field {
+    margin: 10px 0px;
+    z-index: 1;
+    position: relative;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      background: #e6e6e6;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #666666;
+      height: 50px;
+      border-radius: 25px;
+      padding: 0 30px 0 50px;
+      border: 0;
+    }
+
+    textarea {
+      height: 120px;
+    }
+
+    [type='file'] {
+      background-color: transparent;
+      border-radius: 0;
+      padding-left: 0;
+    }
+  }
+
+  .actions {
+    @apply my-5 flex gap-5;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -551,77 +598,13 @@ a.entry-read-more:hover {
   }
 }
 
-.contact100-pic:hover {
-  will-change: transform;
-  transform: perspective(300px) rotateX(-1.58deg) rotateY(-4.46deg)
-    scale3d(1.1, 1.1, 1.1);
-  transition: 0.4s ease-out;
-}
-
-.contact-form h5 {
-  color: #000;
-  font-size: 30px;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
-.contact-form .field label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 16px;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-.contact-form .field {
-  margin: 10px 0px;
-  z-index: 1;
-  position: relative;
-}
-
-.contact-form .field input,
-.contact-form .field textarea {
-  display: block;
-  width: 100%;
-  background: #e6e6e6;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #666666;
-  height: 50px;
-  border-radius: 25px;
-  padding: 0 30px 0 50px;
-  border: 0;
-}
-
-.contact-form .field textarea {
-  height: 120px;
-}
-
-.contact-form .field [type="file"] {
-  background-color: transparent;
-  border-radius: 0;
-  padding-left: 0;
-}
-.contact-form ul.actions {
-  padding: 0;
-  margin: 20px 0px;
-}
-.contact-form ul li {
-  display: inline-block;
-  width: 50%;
-}
-.contact-form ul li:first-child {
-  padding-right: 20px;
-}
 .contact100-form-btn,
-.contact100-clear-btn {
+.btn-outline {
   width: 100%;
   height: 50px;
   border-radius: 25px;
   background: var(--color-green);
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 700;
@@ -631,42 +614,34 @@ a.entry-read-more:hover {
   color: #fff;
   display: inline-block;
   padding: 0 25px;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
+  transition:
+    background 0.4s,
+    color 0.4s;
   outline: none !important;
-  border: 2px solid transparent;
+  border: 2px solid var(--color-green);
 }
 
 @media only screen and (max-width: 800px) {
   .contact100-form-btn,
-  .contact100-clear-btn {
+  .btn-outline {
     font-size: 1rem;
   }
 }
 
-.contact100-clear-btn {
-  font-family: "Josefin Sans", sans-serif;
+.btn-outline {
   font-weight: normal;
   background: transparent;
-  color: #dbdbdb;
-  border: 2px solid var(--color-green);
+  color: var(--color-green);
+
+  &:hover {
+    background: var(--color-green);
+    color: #fff;
+  }
 }
 
 .contact100-form-btn:hover {
   background: transparent;
   color: var(--color-green);
-  border: 2px solid var(--color-green);
-}
-
-.contact100-clear-btn {
-  color: var(--color-green);
-}
-
-.contact100-clear-btn:hover {
-  background: var(--color-green);
-  color: #fff;
 }
 
 .input100:focus + .focus-input100 {
@@ -703,7 +678,7 @@ a.entry-read-more:hover {
 h4.success-msg {
   width: 100%;
   text-align: center;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   text-transform: uppercase;
   color: #07acff;
   font-weight: 700;
@@ -723,84 +698,24 @@ h4.success-msg {
 /** Social Media Sharing Buttons **/
 
 .post-social {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  @apply flex w-full items-center justify-center gap-12 py-2;
   margin-bottom: 30px;
-  justify-content: center;
-  width: 100%;
-}
-.post-social .title {
-  font-size: 14px;
-  text-transform: uppercase;
-  margin-bottom: 0px;
-  margin-right: 10px;
-}
-.post-social .button {
-  margin: 0.5rem 1.5rem;
-  background-color: #fff;
-  border-color: #dbdbdb;
-  border-width: 1px;
-  color: #363636;
-  cursor: pointer;
-  justify-content: center;
-  padding: calc(0.375em - 1px) 0.75em;
-  text-align: center;
-  white-space: nowrap;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  align-items: center;
-  border-radius: 4px;
-  box-shadow: none;
-  display: inline-flex;
-  font-size: 1.5rem;
-  height: 2.25em;
-  justify-content: flex-start;
-  line-height: 1.5;
-  padding: calc(0.375em - 1px) calc(0.625em - 1px);
-  position: relative;
-  vertical-align: top;
-}
-.post-social .button.facebook {
-  color: #3b5998;
-  border-color: #3b5998;
-}
-.post-social .icon {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  height: 1.5rem;
-  width: 1.5rem;
-}
-.post-social .button .icon:first-child:not(:last-child) {
-  margin-left: calc(-0.375em - 1px);
-  margin-right: 0.1875em;
-}
 
-.post-social .button.is-rounded {
-  border-radius: 290486px;
-  padding-left: 1em;
-  padding-right: 1em;
-}
+  .button {
+    @apply inline-flex h-9 items-center whitespace-nowrap;
 
-.post-social .button.whatsapp {
-  color: #128c7e;
-  border-color: #128c7e;
+    .icon {
+      @apply size-6;
+
+      &:first-child:not(:last-child) {
+        margin-left: calc(-0.375em - 1px);
+        margin-right: 0.1875em;
+      }
+    }
+  }
 }
 
 /*/ Social Media Sharing Buttons /*/
-
-.business-website {
-  color: var(--color-green);
-}
-
-.business-website:hover {
-  color: var(--color-green);
-}
-
-.social-share-row {
-  align-items: flex-start;
-}
 
 .social-share-image {
   border: 1px solid #58595b;
@@ -828,59 +743,57 @@ h4.success-msg {
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px 0;
+
+  .facet {
+    border: 1px solid var(--color-green);
+    border-radius: 25px;
+    background: transparent;
+    color: var(--color-green);
+    display: inline-block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1;
+    margin: 10px 5px;
+    outline: none !important;
+    padding: 8px 25px 4px 25px;
+    text-transform: uppercase;
+    transition: all 0.4s;
+
+    &:hover {
+      background: var(--color-green);
+      border-color: transparent;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    &.selected {
+      background: var(--color-green);
+      border-color: transparent;
+      color: #fff;
+    }
+
+    &:last-child {
+      appearance: none;
+      border-radius: 0;
+      padding: 8px 15px 4px 15px;
+      position: relative;
+      width: 9rem;
+    }
+  }
 }
 
-.facets .facet {
-  border: 1px solid var(--color-green);
-  border-radius: 25px;
-  background: transparent;
-  color: var(--color-green);
-  display: inline-block;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1;
-  margin: 10px 5px;
-  outline: none !important;
-  padding: 8px 25px 4px 25px;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  text-transform: uppercase;
-  transition: all 0.4s;
-}
-
-.facets .facet:hover {
-  background: var(--color-green);
-  border-color: transparent;
-  color: #fff;
-  cursor: pointer;
-}
-
-.facets .facet.selected,
-.facets .facet.selected:hover {
-  background: var(--color-green);
-  border-color: transparent;
-  color: #fff;
-}
-
-.facets .facet:last-child {
-  appearance: none;
-  border-radius: 0;
-  padding: 8px 15px 4px 15px;
-  position: relative;
-  width: 9rem;
-}
 /*/ Facets /*/
 
 /******** Business Single ********/
 
 /** Page Header **/
 .post-content.top-content {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-  width: 100%;
+  @apply flex w-full items-center justify-between px-5;
+
+  img {
+    margin-right: 6px;
+    width: 50px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -889,10 +802,6 @@ h4.success-msg {
   }
 }
 
-.post-content.top-content img {
-  margin-right: 6px;
-  width: 50px;
-}
 /*/ Page Header /*/
 
 /** Sidebar **/
@@ -902,55 +811,56 @@ h4.success-msg {
   padding: 20px;
   position: sticky;
   top: 0;
+
+  h4 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+
+    li {
+      align-items: center;
+      display: flex;
+      margin-top: 20px;
+      width: 100%;
+
+      a {
+        text-decoration: none;
+        color: #002d52;
+        font-family: 'Josefin Sans', sans-serif;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .category {
+    text-transform: lowercase;
+  }
+
+  .related-image {
+    background-color: transparent;
+    box-shadow: none;
+    float: left;
+    height: 50px;
+    margin: 0 15px 0 0;
+    width: 70px;
+  }
+
+  .related-information {
+    align-items: center;
+    display: flex;
+  }
+
+  span.meta {
+    display: block;
+  }
 }
 
-.sidebar-blk h4 {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.sidebar-blk ul {
-  list-style: none;
-  margin-bottom: 0;
-  padding: 0;
-}
-
-.sidebar-blk ul li {
-  align-items: center;
-  display: flex;
-  margin-top: 20px;
-  width: 100%;
-}
-
-.sidebar-blk .category {
-  text-transform: lowercase;
-}
-
-.sidebar-blk .related-image {
-  background-color: transparent;
-  box-shadow: none;
-  float: left;
-  height: 50px;
-  margin: 0 15px 0 0;
-  width: 70px;
-}
-
-.sidebar-blk .related-information {
-  align-items: center;
-  display: flex;
-}
-
-.sidebar-blk span.meta {
-  display: block;
-}
-
-.sidebar-blk ul li a {
-  text-decoration: none;
-  color: #002d52;
-  font-family: "Josefin Sans", sans-serif;
-  line-height: 20px;
-}
 /*/ Sidebar /*/
 
 /** Page Contents **/
@@ -963,6 +873,4 @@ h4.success-msg {
 }
 /*/ Page Contents /*/
 
-
 /* TODO - The way the handle button CSS is duplicated a lot */
-/* TODO - Colors are still hex and duplicated everywhere */

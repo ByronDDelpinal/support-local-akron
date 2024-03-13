@@ -28,7 +28,7 @@ export function Share({ socialConfig }: ShareProps) {
       <FacebookShareButton
         url={socialConfig.config.url}
         quote={`${socialConfig.config.quote} #${socialConfig.config.hashtag}`}
-        className="button facebook"
+        className="button"
       >
         <span className="icon">
           <FontAwesomeIcon icon={faFacebookF} />
@@ -37,7 +37,7 @@ export function Share({ socialConfig }: ShareProps) {
       </FacebookShareButton>
       <TwitterShareButton
         url={socialConfig.config.url}
-        className="button twitter"
+        className="button"
         title={socialConfig.config.quote}
         // hashtags={[socialConfig.config.hashtag]}
       >
@@ -48,7 +48,7 @@ export function Share({ socialConfig }: ShareProps) {
       </TwitterShareButton>
       <LinkedinShareButton
         url={socialConfig.config.url}
-        className="button linkedin"
+        className="button"
         title={`${socialConfig.config.quote} #${socialConfig.config.hashtag}`}
       >
         <span className="icon">

@@ -22,7 +22,7 @@ function BusinessPreview() {
             );
           })}
           <div className="see-all-wrapper">
-            <Link href="/business" className="see-all contact100-clear-btn">
+            <Link href="/business" className="see-all btn-outline">
               <span />
               See All
             </Link>
@@ -48,7 +48,7 @@ function ShareSection() {
           <b>Encourage your friends to browse </b> and find new things
           they&apos;ll love and new local things to support!
         </p>
-        <div className="row social-share-row">
+        <div className="social-share-row">
           <Share
             socialConfig={{
               config: {

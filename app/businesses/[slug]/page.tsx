@@ -4,7 +4,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import websiteLogo from '@/public/images/website-logo.png';
 
-export async function generateMetadata({ slug }: { slug: string }) {
+interface BusinessDetailProps {
+  params: {
+    slug: string;
+  };
+}
+
+export async function generateMetadata({
+  params: { slug },
+}: BusinessDetailProps) {
   const business = data.businesses.find((b) => b.slug === slug);
 
   return {
@@ -45,9 +53,7 @@ function RelatedBusinesses({ category, relatedBusinesses }: any) {
 
 export default function BusinessDetail({
   params: { slug },
-}: {
-  params: { slug: string };
-}) {
+}: BusinessDetailProps) {
   const business = data.businesses.find((b) => b.slug === slug);
 
   if (!business) {
@@ -60,21 +66,21 @@ export default function BusinessDetail({
         <div className="row">
           <div className="post-content top-content">
             <div className="post-left-content">
-              <h2 className="section-headline"> {business.name} </h2>
+              <h2 className="section-headline">{business.name}</h2>
               <p className="business-type">{business.type}</p>
             </div>
-            <p className="business-type website">
-              <Image
-                className="website-logo"
-                src={websiteLogo}
-                alt="laptop computer"
-              />
+            <p className="business-type">
               <Link
-                className="business-website"
+                className="flex items-center text-green hover:text-green"
                 href={business.website}
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <Image
+                  className="website-logo"
+                  src={websiteLogo}
+                  alt="laptop computer"
+                />
                 Our Website
               </Link>
             </p>
