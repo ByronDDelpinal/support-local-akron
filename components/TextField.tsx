@@ -13,9 +13,9 @@ export function TextField({
 }: TextFieldProps) {
   return (
     <div className="field">
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id}>{`${label} ${required ? '*' : ''}`}</label>
       {type === 'textarea' ? (
-        <textarea name={id} id={id} required />
+        <textarea name={id} id={id} required={required} />
       ) : (
         <input
           type={type}
