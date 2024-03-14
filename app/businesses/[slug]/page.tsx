@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
-import data from '@/data.json';
 import Image from 'next/image';
 import Link from 'next/link';
 import websiteLogo from '@/public/images/website-logo.png';
+import prisma from '@/lib/prisma';
 
 interface BusinessDetailProps {
   params: {
@@ -13,7 +13,14 @@ interface BusinessDetailProps {
 export async function generateMetadata({
   params: { slug },
 }: BusinessDetailProps) {
-  const business = data.businesses.find((b) => b.slug === slug);
+  const business = await prisma.business.findUnique({
+    where: {
+      slug,
+    },
+    select: {
+      name: true,
+    },
+  });
 
   return {
     title: `Support ${business?.name}`,
@@ -51,10 +58,14 @@ function RelatedBusinesses({ category, relatedBusinesses }: any) {
   );
 }
 
-export default function BusinessDetail({
+export default async function BusinessDetail({
   params: { slug },
 }: BusinessDetailProps) {
-  const business = data.businesses.find((b) => b.slug === slug);
+  const business = await prisma.business.findUnique({
+    where: {
+      slug,
+    },
+  });
 
   if (!business) {
     return <div>Business not found</div>;
@@ -98,7 +109,7 @@ export default function BusinessDetail({
             <div className="post-content">
               <div className="business-content">
                 <h3>Our Story</h3>
-                {business.story}
+                {business.businessStoryShort}
               </div>
               <div className="business-content">
                 <h3>How To Support Us</h3>

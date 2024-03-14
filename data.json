@@ -1,16 +1,24 @@
 {
   "businesses": [
     {
-      "category": "Service",
-      "id": "c63f8189-b4b9-504f-9475-94a02b6d9767",
       "name": "Studio One 23",
-      "image": "/images/contact-bg.jpg",
+      "website": "https://www.youtube.com/channel/UCzc9j3vJ5qbfK5ErcjkIhNg",
+      "type": "Videography and Editing Production",
+      "image": "https://utfs.io/f/68361dfc-7ee2-4ae8-b6d6-2ef41c8a38e6-2b90cy.jpg",
       "supportSummary": "Share our videos on our YouTube, tell people about our work, and support in any way they can.",
       "supportFull": "Our company has lost 100% of our business since we thrive off of person to person contact and community events. Share our videos on our YouTube, tell people about our work, and support in any way they can.",
-      "type": "Videography and Editing Production",
       "slug": "studio-one23",
-      "website": "https://www.youtube.com/channel/UCzc9j3vJ5qbfK5ErcjkIhNg",
-      "story": "Studio One 23 was established in 2016 to produce video stories for the community, businesses and non profits. We have mastered how to tell your story through video and editing production. We are living our dream out loud.\n"
+      "businessStoryShort": "Studio One 23 was established in 2016 to produce video stories for the community, businesses and non profits. We have mastered how to tell your story through video and editing production. We are living our dream out loud.\n"
+    },
+    {
+      "name": "The Art of Healing",
+      "website": "https://www.theartofhealingllc.com/",
+      "type": "Massage Therapy",
+      "image": "https://utfs.io/f/68361dfc-7ee2-4ae8-b6d6-2ef41c8a38e6-2b90cy.jpg",
+      "supportSummary": "Purchase gift cards for future use, share our social media posts, and refer friends and family to our business.",
+      "supportFull": "We are a small business that has been impacted by the COVID-19 pandemic. We are asking for your support by purchasing gift cards for future use, sharing our social media posts, and referring friends and family to our business.",
+      "slug": "the-art-of-healing",
+      "businessStoryShort": "The Art of Healing is a massage therapy business that has been serving the community for over 10 years. We are dedicated to providing a safe and nurturing environment for our clients to relax and heal."
     }
   ]
 }

@@ -4,9 +4,13 @@ import shareImg from '../public/images/support-social-card.png';
 import Image from 'next/image';
 import { Share } from '@/components/Share';
 import { BusinessCard } from '@/components/BusinessCard';
-import data from '@/data.json';
+import prisma from '@/lib/prisma';
 
-function BusinessPreview() {
+async function BusinessPreview() {
+  const businesses = await prisma.business.findMany({
+    take: 4,
+  });
+
   return (
     <div className="pad-70">
       <h2 className="portfolio-title section-title text-center">
@@ -14,7 +18,7 @@ function BusinessPreview() {
       </h2>
       <div className="col-md-10 offset-md-1 ">
         <div className="row">
-          {data.businesses.map((business) => {
+          {businesses.map((business) => {
             return (
               <div key={business.id} className="col-md-6">
                 <BusinessCard business={business} />
@@ -22,7 +26,7 @@ function BusinessPreview() {
             );
           })}
           <div className="see-all-wrapper">
-            <Link href="/business" className="see-all btn-outline">
+            <Link href="/businesses" className="see-all btn-outline">
               <span />
               See All
             </Link>
