@@ -27,7 +27,6 @@ export function Share({ socialConfig }: ShareProps) {
     <div className="post-social">
       <FacebookShareButton
         url={socialConfig.config.url}
-        quote={`${socialConfig.config.quote} #${socialConfig.config.hashtag}`}
         className="button"
       >
         <span className="icon">
