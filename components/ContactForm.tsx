@@ -60,7 +60,7 @@ export function ContactForm({ formAction, pending }: ContactFormProps) {
             />
             <TextField
               label="What's Your Story?"
-              id="story"
+              id="businessStoryShort"
               type="textarea"
               required
             />

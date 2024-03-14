@@ -1,5 +1,16 @@
 'use server';
-import data from '@/data.json';
+import prisma from '@/lib/prisma';
+
+const slugify = (text: string) =>
+  text
+    .toString()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-');
 
 export const createBusiness = async (
   prevState: {
@@ -7,21 +18,23 @@ export const createBusiness = async (
   },
   formData: FormData
 ) => {
-  await new Promise((resolve) => setTimeout(resolve, 250));
-
-  console.log('formData', formData);
-
-  data.businesses.push({
-    id: Math.random().toString(36).substring(7),
-    category: formData.get('category') as string,
+  const data = {
     name: formData.get('name') as string,
-    image: '/images/contact-bg.jpg',
+    website: formData.get('website') as string,
+    type: formData.get('type') as string,
+    image: 'https://utfs.io/f/68361dfc-7ee2-4ae8-b6d6-2ef41c8a38e6-2b90cy.jpg',
     supportSummary: formData.get('supportSummary') as string,
     supportFull: formData.get('supportFull') as string,
-    type: formData.get('type') as string,
-    slug: formData.get('slug') as string,
-    website: formData.get('website') as string,
-    story: formData.get('story') as string,
+    businessStoryShort: formData.get('businessStoryShort') as string,
+  };
+
+  const slug = slugify(data.name);
+
+  const business = await prisma.business.create({
+    data: {
+      ...data,
+      slug,
+    },
   });
 
   return {
