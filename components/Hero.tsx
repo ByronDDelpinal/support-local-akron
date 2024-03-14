@@ -16,8 +16,8 @@ export function Hero() {
           height: '100%',
         }}
       />
-      <div className="overlay">
-        <div className="center">
+      <div className="bg-overlay absolute left-0 top-0 flex h-full w-full items-center justify-center">
+        <div className="text-center text-white">
           <h1 className="name">
             <b>SUPPORT LOCAL AKRON</b>
           </h1>
