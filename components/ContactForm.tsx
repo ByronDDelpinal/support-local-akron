@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactImg from '@/public/images/img-01.png';
-import { TextField } from '@/components/TextField';
+import { StateDropdown, TextField } from '@/components/InputFields';
 
 interface ContactFormProps {
   formAction: (payload: FormData) => void;
@@ -42,8 +42,15 @@ export function ContactForm({ formAction, pending }: ContactFormProps) {
               type="url"
               required
             />
+            <TextField label="Address line 1" id="addressLine1" />
+            <TextField label="Address line 2" id="addressLine2" />
+            <TextField label="City" id="city" />
+            <StateDropdown id="state" />
+            <TextField label="Zip Code" id="zip" />
+            <TextField label="Phone Number" id="phone" type="tel" />
+            <TextField label="Opening Date" id="openingDate" type="date" />
             <div className="field half">
-              <label htmlFor="image">Organization Photo</label>
+              <label htmlFor="image">Organization Photo *</label>
               <input
                 type="file"
                 name="image"
@@ -59,10 +66,15 @@ export function ContactForm({ formAction, pending }: ContactFormProps) {
               required
             />
             <TextField
-              label="What's Your Story?"
+              label="What's Your Story? (140 Characters)"
               id="businessStoryShort"
-              type="textarea"
+              limit={140}
               required
+            />
+            <TextField
+              label="What's Your Story? (Unabridged)"
+              id="businessStoryFull"
+              type="textarea"
             />
             <TextField
               label={
