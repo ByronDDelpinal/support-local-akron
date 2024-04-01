@@ -32,6 +32,7 @@ model Business {
   businessStoryShort String
   businessStoryFull  String?
   openingDate        DateTime?
+  approved           Boolean   @default(false)
   createdAt          DateTime  @default(now())
   updatedAt          DateTime  @updatedAt
 }
