@@ -22,6 +22,7 @@ You would be amazing if you submitted a PR to fix any of these!
 - Built with [NextJS 14](https://nextjs.org/) using the app router
 - CI/CD and hosting through [Vercel](https://www.vercel.com/)
 - Data is stored with [Vercel Postgres](https://vercel.com/docs/storage/vercel-postgres) and accessed with [Prisma](https://www.prisma.io/)
+  - [Vercel Blob](https://vercel.com/docs/storage/vercel-blob) for image storage
 - [Tailwind](https://tailwindcss.com/) for some styling
 
 ## Local Development
@@ -49,7 +50,8 @@ Lol
 
 1. Create a Vercel account if you don't have one already and [make a new project](https://vercel.com/docs/projects/overview#creating-a-project).
 2. Follow [this guide](https://vercel.com/docs/storage/vercel-postgres/quickstart#create-a-postgres-database) to create the Vercel Postgres database and sync environment variables locally
-3. Run `npx prisma db seed` to populate the DB with mock data, or manually with Prisma Studio
+3. Follow [this guide](https://vercel.com/docs/storage/vercel-blob) to create a Vercel Blob store
+4. Run `npx prisma db seed` to populate the DB with mock data, or manually with Prisma Studio
 
 ## Things To Note
 

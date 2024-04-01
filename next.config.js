@@ -2,7 +2,19 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost', 'utfs.io'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.public.blob.vercel-storage.com',
+      },
+      {
+        hostname: 'localhost',
+      },
+      {
+        protocol: 'https',
+        hostname: 'utfs.io',
+      },
+    ],
   },
 };
 

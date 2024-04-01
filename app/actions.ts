@@ -1,5 +1,6 @@
 'use server';
 import prisma from '@/lib/prisma';
+import { put } from '@vercel/blob';
 
 const slugify = (text: string) =>
   text
@@ -18,6 +19,9 @@ export const createBusiness = async (
   },
   formData: FormData
 ) => {
+  const image = formData.get('image') as File;
+  const blob = await put(image.name, image, { access: 'public' });
+
   const data = {
     name: formData.get('name') as string,
     website: formData.get('website') as string,
@@ -27,9 +31,9 @@ export const createBusiness = async (
     state: formData.get('state') as string,
     zip: formData.get('zip') as string,
     phone: formData.get('phone') as string,
-    openingDate: new Date(formData.get('openingDate') as string),
+    openingDate: formData.get('openingDate') ? new Date(formData.get('openingDate') as string) : undefined,
     type: formData.get('type') as string,
-    image: 'https://utfs.io/f/68361dfc-7ee2-4ae8-b6d6-2ef41c8a38e6-2b90cy.jpg',
+    image: blob.url,
     supportSummary: formData.get('supportSummary') as string,
     supportFull: formData.get('supportFull') as string,
     businessStoryShort: formData.get('businessStoryShort') as string,
