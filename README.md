@@ -29,6 +29,11 @@ You would be amazing if you submitted a PR to fix any of these!
 
 ### Configuration Steps
 
+### Setup Auth
+
+1. [Generate auth secret](https://generate-secret.vercel.app/32) and set as the value to `AUTH_SECRET` in env
+2. Add `ADMIN_USER` and `ADMIN_PASSWORD` to environment variables with whatever values you choose.
+
 ### Setup
 
 ```shell
