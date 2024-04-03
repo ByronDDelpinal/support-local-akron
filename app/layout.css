@@ -486,6 +486,10 @@ article.blog-listing {
     color 0.4s;
   outline: none !important;
   border: 2px solid var(--color-green);
+
+  &:disabled {
+    opacity: 50%;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -506,7 +510,7 @@ article.blog-listing {
   }
 }
 
-.contact100-form-btn:hover {
+.contact100-form-btn:not(:disabled):hover {
   background: transparent;
   color: var(--color-green);
 }
