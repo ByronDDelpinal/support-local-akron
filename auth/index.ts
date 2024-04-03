@@ -47,6 +47,7 @@ export const {
   pages: {
     signIn: '/login',
   },
+  secret: 'f9xQy49mlTC61AmViBJt2KGr+asqM5yljAkSnM21/J4=',
 });
 
 export const safelyRunAdminServerAction = async <T>(
