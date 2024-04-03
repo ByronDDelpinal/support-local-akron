@@ -6,6 +6,7 @@ import { createBusiness } from '../actions';
 
 const initialState = {
   message: '',
+  imageSizeError: '',
 };
 
 function SuccessMessage({ message }: { message: string }) {
@@ -36,7 +37,7 @@ export default function Contact() {
           {state.message ? (
             <SuccessMessage message={state.message} />
           ) : (
-            <ContactForm formAction={formAction} pending={pending} />
+            <ContactForm formAction={formAction} pending={pending} state={state} />
           )}
         </section>
       </div>

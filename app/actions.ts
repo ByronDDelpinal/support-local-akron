@@ -16,10 +16,18 @@ const slugify = (text: string) =>
 export const createBusiness = async (
   prevState: {
     message: string;
+    imageSizeError: string;
   },
   formData: FormData
 ) => {
   const image = formData.get('image') as File;
+  // server upload limit is 4.5MB
+  if (image.size > 4.5 * 1024 * 1024) {
+    return {
+      imageSizeError: 'Image is too large. Please upload an image under 4.5MB.',
+    };
+  }
+
   const blob = await put(image.name, image, { access: 'public' });
 
   const data = {

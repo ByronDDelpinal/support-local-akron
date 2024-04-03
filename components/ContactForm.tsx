@@ -7,9 +7,10 @@ import { StateDropdown, TextField } from '@/components/InputFields';
 interface ContactFormProps {
   formAction: (payload: FormData) => void;
   pending: boolean;
+  state: any;
 }
 
-export function ContactForm({ formAction, pending }: ContactFormProps) {
+export function ContactForm({ formAction, pending, state }: ContactFormProps) {
   return (
     <div className="container">
       <div className="col-lg-12">
@@ -50,14 +51,18 @@ export function ContactForm({ formAction, pending }: ContactFormProps) {
             <TextField label="Phone Number" id="phone" type="tel" />
             <TextField label="Opening Date" id="openingDate" type="date" />
             <div className="field half">
-              <label htmlFor="image">Organization Photo *</label>
+              <label htmlFor="image">Organization Photo (Max 4.5MB)*</label>
               <input
                 type="file"
                 name="image"
                 id="image"
                 className="input100"
+                accept=".png, .jpg, .jpeg"
                 required
               />
+              {state.imageSizeError && (
+                <span className="text-red-500">{state.imageSizeError}</span>
+              )}
               <span className="focus-input100"></span>
             </div>
             <TextField
