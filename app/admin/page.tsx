@@ -1,8 +1,8 @@
 import { signOutAction } from '@/auth/actions';
 import prisma from '@/lib/prisma';
+import Link from 'next/link';
 
 export default async function Admin() {
-
   const businesses = await prisma.business.findMany({
     where: {
       approved: false,
@@ -22,7 +22,13 @@ export default async function Admin() {
 
       <ul>
         {businesses.map((business) => {
-          return <li key={business.id}>{business.name}</li>;
+          return (
+            <li key={business.id}>
+              <Link href={`/admin/businesses/${business.slug}`}>
+                {business.name}
+              </Link>
+            </li>
+          );
         })}
       </ul>
     </div>
