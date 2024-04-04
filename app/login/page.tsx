@@ -1,6 +1,6 @@
 import { auth } from '@/auth';
 import { PATH_ADMIN } from '@/auth/paths';
-import { LoginForm } from '@/components/LoginForm';
+import { LoginForm } from '@/components/admin/LoginForm';
 import { redirect } from 'next/navigation';
 
 export default async function LoginPage() {

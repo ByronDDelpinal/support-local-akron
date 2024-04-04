@@ -63,11 +63,6 @@ export default async function Admin() {
                 <TableCell>
                   {new Date(business.createdAt).toLocaleDateString()}
                 </TableCell>
-                <TableCell>
-                  <button className="rounded bg-green px-4 py-2 text-sm font-bold text-white">
-                    Approve
-                  </button>
-                </TableCell>
               </TableRow>
             );
           })}

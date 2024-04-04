@@ -1,5 +1,6 @@
 'use server';
 import prisma from '@/lib/prisma';
+import { redirect } from 'next/navigation';
 
 export async function approveBusiness(prevState: any, formData: FormData) {
   const businessId = formData.get('businessId') as string;
@@ -13,9 +14,5 @@ export async function approveBusiness(prevState: any, formData: FormData) {
     },
   });
 
-  return {
-    redirect: {
-      destination: '/admin',
-    },
-  };
+  redirect('/admin');
 }

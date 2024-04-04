@@ -5,6 +5,7 @@ import websiteLogo from '@/public/images/website-logo.png';
 import prisma from '@/lib/prisma';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { ApproveButton } from '@/components/admin/ApproveButton';
 
 export const metadata: Metadata = {
   title: 'Admin | Support Local Akron',
@@ -14,15 +15,6 @@ interface BusinessDetailProps {
   params: {
     slug: string;
   };
-}
-
-function ApproveButton({ businessId }: { businessId: string }) {
-  return (
-    <form method="post">
-      <input type="hidden" name="businessId" value={businessId} />
-      <button type="submit">Approve</button>
-    </form>
-  );
 }
 
 export default async function BusinessDetail({
