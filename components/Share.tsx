@@ -4,12 +4,7 @@ import {
   TwitterShareButton,
   LinkedinShareButton,
 } from 'react-share';
-import {
-  faFacebookF,
-  faTwitter,
-  faLinkedin,
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaFacebookF, FaTwitter, FaLinkedin } from 'react-icons/fa6';
 
 interface ShareProps {
   socialConfig: {
@@ -25,12 +20,9 @@ interface ShareProps {
 export function Share({ socialConfig }: ShareProps) {
   return (
     <div className="post-social">
-      <FacebookShareButton
-        url={socialConfig.config.url}
-        className="button"
-      >
+      <FacebookShareButton url={socialConfig.config.url} className="button">
         <span className="icon">
-          <FontAwesomeIcon icon={faFacebookF} />
+          <FaFacebookF />
         </span>
         <span className="text">Facebook</span>
       </FacebookShareButton>
@@ -41,7 +33,7 @@ export function Share({ socialConfig }: ShareProps) {
         // hashtags={[socialConfig.config.hashtag]}
       >
         <span className="icon">
-          <FontAwesomeIcon icon={faTwitter} />
+          <FaTwitter />
         </span>
         <span className="text">Twitter</span>
       </TwitterShareButton>
@@ -51,7 +43,7 @@ export function Share({ socialConfig }: ShareProps) {
         title={`${socialConfig.config.quote} #${socialConfig.config.hashtag}`}
       >
         <span className="icon">
-          <FontAwesomeIcon icon={faLinkedin} />
+          <FaLinkedin />
         </span>
         <span className="text">LinkedIn</span>
       </LinkedinShareButton>

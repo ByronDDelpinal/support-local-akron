@@ -572,7 +572,7 @@ h4.success-msg {
     @apply inline-flex h-9 items-center whitespace-nowrap;
 
     .icon {
-      @apply size-6;
+      @apply size-6 flex items-center justify-center;
 
       &:first-child:not(:last-child) {
         margin-left: calc(-0.375em - 1px);
