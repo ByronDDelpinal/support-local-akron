@@ -4,6 +4,11 @@ import Link from 'next/link';
 import websiteLogo from '@/public/images/website-logo.png';
 import prisma from '@/lib/prisma';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Admin | Support Local Akron',
+};
 
 interface BusinessDetailProps {
   params: {
