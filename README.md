@@ -8,11 +8,6 @@ If you think this will help your city then please clone, fork, download, or copy
 
 ## Known Issues
 
-You would be amazing if you submitted a PR to fix any of these!
-
-- The photo uploader isn't working on the "Get Listed" form.
-- There are no tests.
-
 ### Things That Aren't Issues But Annoy Me
 
 - The CSS is a one-file disaster and doesn't use a pre-processor.
@@ -44,7 +39,9 @@ npx prisma studio
 
 ### Running Tests Locally
 
-Lol
+```shell
+yarn test
+```
 
 ## Deploying With Vercel
 
