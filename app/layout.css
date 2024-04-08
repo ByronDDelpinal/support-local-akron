@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -38,7 +36,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Josefin Sans', sans-serif;
+  @apply font-sans;
 }
 
 :active,
@@ -100,43 +98,6 @@ section {
     #eeeeee 65%,
     #fff 100%
   );
-  background: -ms-linear-gradient(
-    left,
-    #fff 0,
-    #eeeeee 35%,
-    #eeeeee 65%,
-    #fff 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    #fff 0,
-    #eeeeee 35%,
-    #eeeeee 65%,
-    #fff 100%
-  );
-  background: -webkit-linear-gradient(
-    left,
-    #fff 0,
-    #eeeeee 35%,
-    #eeeeee 65%,
-    #fff 100%
-  );
-  background: -moz-linear-gradient(
-    left,
-    #fff 0,
-    #eeeeee 35%,
-    #eeeeee 65%,
-    #fff 100%
-  );
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(0%, #fff),
-    color-stop(35%, #eeeeee),
-    color-stop(65%, #eeeeee),
-    color-stop(100%, #fff)
-  );
 }
 
 .about-us {
@@ -153,13 +114,6 @@ section {
   li {
     list-style-type: square;
   }
-}
-
-.cover {
-  width: 100%;
-  height: 100vh;
-  background-color: white;
-  position: relative;
 }
 
 .indexpage .see-all-wrapper {
@@ -182,13 +136,6 @@ section {
   }
 }
 
-.animated {
-  -webkit-animation-duration: 0.6s;
-  animation-duration: 0.6s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
 .footer-wrapper {
   background-color: #d1d3d4;
 
@@ -197,7 +144,7 @@ section {
   }
 
   a {
-    color: var(--color-green);
+    @apply text-green hover:text-green;
     margin-top: 10px;
   }
 
@@ -212,26 +159,30 @@ section {
   margin: 10px 0px;
 }
 
-.cover .name {
+.name {
   font-size: 36px;
   font-weight: 900;
-}
-
-@media only screen and (min-width: 550px) {
-  .cover .name {
-    font-size: 46px;
+  @media only screen and (min-width: 550px) {
+    & {
+      font-size: 46px;
+    }
   }
 }
 
 .main-content {
   min-height: calc(100vh - 210px);
 }
+
 .pad-70 {
   padding: 70px 0px;
 }
 
 .pad-20 {
   padding: 20px 0px;
+}
+
+.pad-40 {
+  padding: 40px 0px;
 }
 
 h2.section-title {
@@ -251,31 +202,23 @@ h2.section-title {
   }
 }
 
-article.blog-listing {
+article.business-listing {
   background-color: #fdfdfd;
   box-shadow: 0.3rem 0.4rem 2.4rem rgba(0, 0, 0, 0.2);
   margin-bottom: 50px;
   padding: 20px 20px 10px;
 
   h2.entry-title {
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;
     line-height: 20px;
     margin-bottom: 0px;
   }
 
   a {
+    @apply font-sans text-green no-underline;
     font-size: 20px;
-    color: var(--color-green);
-    font-family: 'Josefin Sans', sans-serif;
-    text-decoration: none;
 
     &.entry-read-more {
-      text-align: right;
-      display: inline-block;
-      font-weight: bold;
-      width: 100%;
-      text-transform: uppercase;
+      @apply inline-block w-full text-right font-bold uppercase;
       font-size: 18px;
 
       &:hover {
@@ -302,57 +245,32 @@ article.blog-listing {
   }
 }
 
-.inner-blog-post .section-headline {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 0 !important;
-  text-transform: uppercase;
-}
+.business-detail {
+  .business-name {
+    @apply mb-0 mt-5 font-bold uppercase text-green;
+    font-size: 30px;
+  }
 
-.inner-blog-post .business-type {
-  color: #808285;
-  flex-basis: 165px;
-  flex-shrink: 0;
-}
+  .business-type {
+    color: #808285;
+  }
 
-.hide {
-  display: none;
-}
+  .business-content {
+    @apply mt-5 py-2.5;
 
-.pad-40 {
-  padding: 40px 0px;
-}
-
-.photo-credit {
-  color: gray;
-  font-size: 0.8rem;
-  font-style: italic;
-  text-align: right;
-  width: 100%;
-
-  a,
-  a:hover {
-    color: var(--color-green);
+    a {
+      @apply text-green;
+    }
   }
 }
 
-.inner-blog-post h2.section-headline {
-  color: var(--color-green);
-  font-size: 30px;
-  margin: 20px 0px;
-}
+.photo-credit {
+  @apply w-full text-right italic text-gray-500;
+  font-size: 0.8rem;
 
-.inner-blog-post .business-content {
-  padding: 10px 0;
-}
-
-.inner-blog-post .business-content a {
-  color: var(--color-green);
-}
-
-.inner-blog-post .business-content h3 {
-  font-weight: bold;
-  text-transform: uppercase;
+  a {
+    @apply text-green hover:text-green;
+  }
 }
 
 .contactImage {
@@ -370,13 +288,8 @@ article.blog-listing {
 }
 
 .wrap-contact100 {
-  background: #fafdfe;
-  background: #fff;
+  @apply flex flex-wrap justify-between overflow-hidden bg-white;
   border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   padding: 50px;
   box-shadow: 3px 3px 5px #7f7f7f85;
 }
@@ -414,25 +327,20 @@ article.blog-listing {
     position: relative;
 
     label {
-      display: block;
+      @apply block font-sans;
       margin-bottom: 5px;
       font-size: 16px;
-      font-family: 'Josefin Sans', sans-serif;
     }
 
     input,
     textarea {
-      display: block;
-      width: 100%;
+      @apply block w-full rounded-3xl border-none font-sans;
       background: #e6e6e6;
-      font-family: 'Josefin Sans', sans-serif;
       font-size: 15px;
       line-height: 1.5;
       color: #666666;
       height: 50px;
-      border-radius: 25px;
       padding: 0 30px 0 50px;
-      border: 0;
     }
 
     textarea {
@@ -440,9 +348,7 @@ article.blog-listing {
     }
 
     [type='file'] {
-      background-color: transparent;
-      border-radius: 0;
-      padding-left: 0;
+      @apply rounded-none bg-transparent pl-0;
     }
   }
 
@@ -458,61 +364,39 @@ article.blog-listing {
 
   .contact100-pic,
   .contact-form {
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
+    @apply mx-auto block w-full p-0;
   }
 }
 
 .contact100-form-btn,
 .btn-outline {
-  width: 100%;
+  @apply inline-block w-full border-2 border-green bg-green text-center font-sans font-bold uppercase text-white outline-none;
   height: 50px;
   border-radius: 25px;
-  background: var(--color-green);
-  font-family: 'Josefin Sans', sans-serif;
-  text-transform: uppercase;
   font-size: 1.5rem;
-  font-weight: 700;
   line-height: 50px;
-  text-align: center;
-  vertical-align: middle;
-  color: #fff;
-  display: inline-block;
-  padding: 0 25px;
+  /* padding: 0 25px; */
   transition:
     background 0.4s,
     color 0.4s;
-  outline: none !important;
-  border: 2px solid var(--color-green);
 
   &:disabled {
     opacity: 50%;
   }
-}
 
-@media only screen and (max-width: 800px) {
-  .contact100-form-btn,
-  .btn-outline {
-    font-size: 1rem;
+  @media only screen and (max-width: 800px) {
+    & {
+      font-size: 1rem;
+    }
   }
 }
 
 .btn-outline {
-  font-weight: normal;
-  background: transparent;
-  color: var(--color-green);
-
-  &:hover {
-    background: var(--color-green);
-    color: #fff;
-  }
+  @apply bg-transparent font-normal text-green hover:bg-green hover:text-white;
 }
 
 .contact100-form-btn:not(:disabled):hover {
-  background: transparent;
-  color: var(--color-green);
+  @apply bg-transparent text-green;
 }
 
 .input100:focus + .focus-input100 {
@@ -588,11 +472,11 @@ h4.success-msg {
   border: 1px solid #58595b;
   margin: 0 auto;
   max-width: 40vw;
-}
 
-@media only screen and (max-width: 600px) {
-  .social-share-image {
-    max-width: 100%;
+  @media only screen and (max-width: 600px) {
+    & {
+      max-width: 100%;
+    }
   }
 }
 
@@ -606,45 +490,25 @@ h4.success-msg {
 
 /** Facets **/
 .facets {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  @apply flex flex-wrap justify-center;
   padding: 10px 0;
 
   .facet {
-    border: 1px solid var(--color-green);
+    @apply border border-green bg-transparent font-sans uppercase text-green outline-none hover:border-transparent hover:bg-green hover:text-white;
     border-radius: 25px;
-    background: transparent;
-    color: var(--color-green);
-    display: inline-block;
-    font-family: 'Josefin Sans', sans-serif;
     font-size: 1.2rem;
     line-height: 1;
     margin: 10px 5px;
-    outline: none !important;
     padding: 8px 25px 4px 25px;
-    text-transform: uppercase;
     transition: all 0.4s;
 
-    &:hover {
-      background: var(--color-green);
-      border-color: transparent;
-      color: #fff;
-      cursor: pointer;
-    }
-
     &.selected {
-      background: var(--color-green);
-      border-color: transparent;
-      color: #fff;
+      @apply border-transparent bg-green text-white;
     }
 
     &:last-child {
-      appearance: none;
-      border-radius: 0;
+      @apply w-36 appearance-none rounded-none;
       padding: 8px 15px 4px 15px;
-      position: relative;
-      width: 9rem;
     }
   }
 }
@@ -654,19 +518,8 @@ h4.success-msg {
 /******** Business Single ********/
 
 /** Page Header **/
-.post-content.top-content {
-  @apply flex w-full items-center justify-between px-5;
-
-  img {
-    margin-right: 6px;
-    width: 50px;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .post-content.top-content {
-    flex-wrap: wrap;
-  }
+.top-content {
+  @apply flex w-full flex-wrap items-center justify-between px-5 lg:flex-nowrap;
 }
 
 /*/ Page Header /*/
@@ -678,11 +531,6 @@ h4.success-msg {
   padding: 20px;
   position: sticky;
   top: 0;
-
-  h4 {
-    font-weight: bold;
-    text-transform: uppercase;
-  }
 
   ul {
     list-style: none;
@@ -696,9 +544,9 @@ h4.success-msg {
       width: 100%;
 
       a {
+        @apply font-sans;
         text-decoration: none;
         color: #002d52;
-        font-family: 'Josefin Sans', sans-serif;
         line-height: 20px;
       }
     }
@@ -728,15 +576,3 @@ h4.success-msg {
 }
 
 /*/ Sidebar /*/
-
-/** Page Contents **/
-.post-content ~ .entry-media {
-  margin-bottom: 20px;
-}
-
-.post-content .business-content {
-  margin-top: 20px;
-}
-/*/ Page Contents /*/
-
-/* TODO - The way the handle button CSS is duplicated a lot */

@@ -5,7 +5,7 @@ export function BusinessCard({ business }: any) {
   const MAX_LENGTH_TITLE = 80;
 
   return (
-    <article className="blog-listing" key={business.slug}>
+    <article className="business-listing" key={business.slug}>
       <div className="entry-meta-content">
         <div className="entry-media">
           <Link href={`/businesses/${business.slug}`}>

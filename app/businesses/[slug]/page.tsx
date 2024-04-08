@@ -31,7 +31,7 @@ function RelatedBusinesses({ category, relatedBusinesses }: any) {
   return (
     <div className="col-md-4">
       <div className="sidebar-blk">
-        <h4>Related Listings</h4>
+        <h4 className="font-bold uppercase">Related Listings</h4>
         <p>
           While you're here, be sure to check out these other{' '}
           <span className="category">{category}</span> listings!
@@ -58,6 +58,31 @@ function RelatedBusinesses({ category, relatedBusinesses }: any) {
   );
 }
 
+function BusinessContact({ business }: any) {
+  const { addressLine1, addressLine2, city, state, zip, phone } = business;
+  return (
+    <div className="col-md-4">
+      <div className="sidebar-blk">
+        <h4 className="font-bold uppercase">Contact Us</h4>
+        <div>
+          {addressLine1 && <p>{addressLine1}</p>}
+          {addressLine2 && <p>{addressLine2}</p>}
+          {city && (
+            <p>
+              {city}, {state} {zip}
+            </p>
+          )}
+        </div>
+        {phone && (
+          <p>
+            <strong>Phone:</strong> {phone}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default async function BusinessDetail({
   params: { slug },
 }: BusinessDetailProps) {
@@ -72,15 +97,15 @@ export default async function BusinessDetail({
   }
 
   return (
-    <div className="inner-blog-post pad-40">
+    <div className="business-detail pad-40">
       <div className="container">
         <div className="row">
-          <div className="post-content top-content">
-            <div className="post-left-content">
-              <h2 className="section-headline">{business.name}</h2>
+          <div className="top-content">
+            <div>
+              <h2 className="business-name">{business.name}</h2>
               <p className="business-type">{business.type}</p>
             </div>
-            <p className="business-type">
+            <p>
               <Link
                 className="flex items-center text-green hover:text-green"
                 href={business.website}
@@ -88,7 +113,7 @@ export default async function BusinessDetail({
                 rel="noopener noreferrer"
               >
                 <Image
-                  className="website-logo"
+                  className="mr-1.5 w-[50px]"
                   src={websiteLogo}
                   alt="laptop computer"
                 />
@@ -96,27 +121,26 @@ export default async function BusinessDetail({
               </Link>
             </p>
           </div>
-          <div className="col-md-12">
-            <div className="entry-media">
-              <Image
-                src={business.image}
-                alt="business logo"
-                width={730}
-                height={500}
-                style={{ maxHeight: '500px' }}
-              />
-            </div>
-            <div className="post-content">
+          <div className="col-md-8">
+            <Image
+              src={business.image}
+              alt="business logo"
+              width={730}
+              height={500}
+              style={{ maxHeight: '500px' }}
+            />
+            <div>
               <div className="business-content">
-                <h3>Our Story</h3>
+                <h3 className="font-bold uppercase">Our Story</h3>
                 {business.businessStoryShort}
               </div>
               <div className="business-content">
-                <h3>How To Support Us</h3>
+                <h3 className="font-bold uppercase">How To Support Us</h3>
                 {business.supportFull}
               </div>
             </div>
           </div>
+          <BusinessContact business={business} />
         </div>
       </div>
     </div>
