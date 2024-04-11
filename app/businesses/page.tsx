@@ -12,6 +12,9 @@ export default async function Businesses({ searchParams: { sortOrder } }: any) {
 
   const businesses = await prisma.business.findMany({
     ...query,
+    where: {
+      approved: true,
+    },
   });
 
   return (
@@ -24,10 +27,7 @@ export default async function Businesses({ searchParams: { sortOrder } }: any) {
         <ul className="article-list row">
           {businesses.map((business) => {
             return (
-              <li
-                key={business.slug}
-                className="col-lg-6"
-              >
+              <li key={business.slug} className="col-lg-6">
                 <BusinessCard business={business} />
               </li>
             );
