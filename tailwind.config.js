@@ -12,6 +12,9 @@ module.exports = {
         green: '#35833f',
         overlay: '#0000007a',
       },
+      fontFamily: {
+        sans: ['var(--font-josefin-sans)'],
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],

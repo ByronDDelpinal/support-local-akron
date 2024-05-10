@@ -3,7 +3,7 @@ import heroBg from '../public/images/northside-akron.jpg';
 
 export function Hero() {
   return (
-    <div id="#top" className="cover animated">
+    <div id="#top" className="relative h-screen w-full bg-white">
       <Image
         title="Cover image"
         alt="Air Balloon in Nature"
@@ -16,7 +16,7 @@ export function Hero() {
           height: '100%',
         }}
       />
-      <div className="bg-overlay absolute left-0 top-0 flex h-full w-full items-center justify-center">
+      <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center bg-overlay">
         <div className="text-center text-white">
           <h1 className="name">
             <b>SUPPORT LOCAL AKRON</b>
